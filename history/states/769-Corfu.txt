@@ -1,0 +1,30 @@
+state={
+	id=769
+	name="STATE_769"
+	resources={
+		oil=2
+	}
+	
+	history={
+		owner = ALB
+		buildings = {
+			infrastructure = 1
+			10203 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = GRE
+		add_core_of = ALB
+		
+
+	}
+	
+	provinces={
+		10203 
+	}
+	manpower=47023
+	buildings_max_level_factor=1.000
+	state_category=	small_island
+}

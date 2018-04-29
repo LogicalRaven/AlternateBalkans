@@ -1,0 +1,22 @@
+state={
+	id=771
+	name="STATE_771"
+	manpower=509400
+	history={
+		owner = AUS
+		add_core_of = AUS
+		add_core_of = CZE
+	}
+	
+	state_category = large_city #Not sure if this is right, just put in here to get rid of error for now
+
+	provinces = {
+		543
+		557
+		5283
+		11525 
+	}
+
+
+	buildings_max_level_factor=1.000
+}

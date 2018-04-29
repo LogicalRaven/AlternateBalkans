@@ -1,0 +1,28 @@
+state={
+	id=763
+	name="STATE_763"
+	
+	state_category = large_city #Once again just here to get rid of error, change if needed
+
+	history={
+		owner = ROM
+		victory_points = {
+			3663 5
+		}
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+		
+			}
+			
+
+		add_core_of = ROM
+
+	}
+	provinces={
+		660 674 687 3076 3663 6695 9651 11619 11636 
+	}
+	manpower=83193
+	buildings_max_level_factor=1.000
+}
