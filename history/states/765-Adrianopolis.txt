@@ -1,0 +1,30 @@
+state={
+	id=765
+	name="STATE_765"
+	resources={
+		steel=8
+		chromium=22
+	}
+	
+	history={
+		owner = BUL
+		buildings = {
+			infrastructure = 2
+			arms_factory=1
+
+		}
+		
+		add_core_of = GRE
+		add_core_of = BL
+		
+
+	}
+	
+
+    provinces={
+		849 922 3879 3893 6895 11842 
+	}
+	manpower=260367
+	buildings_max_level_factor=1.000
+	state_category = rural
+}

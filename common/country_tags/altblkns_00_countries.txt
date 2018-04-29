@@ -1,0 +1,5 @@
+#Only add modded tags into here, it causes duplicate tag errors if you add vanilla tags.
+
+SLV = "countries/Slovenia_alkblkns.txt"
+BES = "countries/bess_altblkns.txt"
+BOS = "countries/Bosnia_altblkns.txt"

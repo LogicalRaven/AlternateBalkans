@@ -1,0 +1,21 @@
+state={
+	id=766
+	name="STATE_766"
+
+	state_category = town
+
+	history={
+	    owner = CRO
+	    buildings = {
+	    infrastructure = 1
+			industrial_complex = 1
+	        }
+	    add_core_of = CRO
+	}	
+
+	provinces={
+		3985 6614 6619 6957 6983 9586 9588 
+	}
+	manpower=185000
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,464 @@
+﻿division_template = {
+    name = "Infantry-Division"
+
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+        artillery = { x = 2 y = 1 }
+        artillery = { x = 2 y = 2 }
+    }
+	support = {
+        engineer = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
+    }
+}
+
+division_template = {
+	name = "Cavalry-Division" 			# Cavalry Division
+
+	division_names_group = BUL_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Tank Division"
+	
+
+	regiments = {
+
+        light_armor = { x = 0 y = 0 }
+        light_armor = { x = 0 y = 0 }
+        motorized = { x = 2 y = 0 }
+        motorized = { x = 2 y = 1 }
+    }
+    support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+    }
+}
+
+##
+
+units = {
+	##### Tanks #####
+	division = {
+		#name = "Best Tanks"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 949  # Sofia
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.2
+
+	}
+
+	division = {
+		#name = "Best Tanks Number 2"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 949  # Sofia
+		division_template = "Tank Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.2
+
+	}
+	
+	#### Infantry ####
+	
+	division = {
+		#name = "Infantry 1"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 949  # Sofia
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "Infantry 2"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 949  # Sofia
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+
+	division = {
+		#name = "Infantry 3"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 6923  # Plovdiv
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	
+	#### Cavalry ####
+	
+	division = {
+		#name = "Cavalry-Division 1"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 6923  # Plovdiv
+		division_template = "Cavalry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "Cavalry 2"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = 6923  # Plovdiv
+		division_template = "Cavalry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	#### Out of order Infantry ####
+	
+	division = {
+		#name = "Infantry 4"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 9783  # Varna
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "Infantry 5"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 9783  # Varna
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "Infantry 6"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 9610  # Pleven
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "Infantry 7"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 9610  # Pleven
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "Infantry 9"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 9610  # Pleven
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	
+	#### Romanian Border Guys ####
+	
+	division = {
+		#name = "Infantry 10"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 11657 
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+		division = {
+		#name = "Infantry 11"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 3645  
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+		division = {
+		#name = "Infantry 12"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 637
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+		division = {
+		#name = "Infantry 13"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 3639
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+		division = {
+		#name = "Infantry 14"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 3636
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+		division = {
+		#name = "Infantry 15"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 9617
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+		division = {
+		#name = "Infantry 16"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 9617
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+		division = {
+		#name = "Infantry 17"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 11603
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+		division = {
+		#name = "Infantry 18"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 6677
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+		division = {
+		#name = "Infantry 19"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 9635
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+		division = {
+		#name = "Turkey | Infantry 20"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 6864
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+		division = {
+		#name = "Infantry 21"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 9887
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+		division = {
+		#name = "Infantry 22"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 6912
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+		division = {
+		#name = "Infantry 9"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 6895
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+		division = {
+		#name = "Infantry 9"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 6895
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+		division = {
+		#name = "Infantry 9"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 922
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+		division = {
+		#name = "Infantry 9"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 922
+		division_template = "Infantry-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+}
+
+air_wings = {
+	### Vuzdushnite voiski -- Sofia (early purchases of GER Ar 65, He 51 fighters)
+	157 = {
+		# Vuzdushnite voiski na Negovo Velichestvo
+		fighter_equipment_0 =  {
+			owner = "BUL"
+			creator = "GER" 
+			amount = 157
+		}
+	}
+}
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "BUL"
+		}
+		requested_factories = 1
+		progress = 0.49
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "BUL"
+		}
+		requested_factories = 1
+		progress = 0.73
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "BUL" 
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 100
+	}
+}

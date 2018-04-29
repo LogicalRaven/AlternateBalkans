@@ -1,0 +1,24 @@
+
+state={
+	id=72
+	name="STATE_72"
+	manpower=152000
+	
+	history={
+		owner = AUS
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+
+		}
+		add_core_of = AUS
+
+	}
+
+	provinces={
+		9567 
+	}
+	
+	buildings_max_level_factor=1.000
+	state_category=rural
+}
