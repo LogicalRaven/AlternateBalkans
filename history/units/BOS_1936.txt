@@ -1,2 +1,89 @@
 division_template = {
-			name = 
+	name = "Pesadijska divizija"		# Infantry Division
+	division_names_group = BOS_INF_01
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Rezervna milicija"	# Velldog: This is a Reserve Militia unit lacking equipment/experience #
+	division_names_group = BOS_INFB_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	division= {	# "1. Pesadijska Divizija"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6942
+		division_template = "Pesadijska divizija"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.2
+	}
+
+	division= {	# "2. Pesadijska Divizija"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 6942
+		division_template = "Pesadijska divizija"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.2
+	}
+
+	division= {	# "3. Pesadijska Divizija"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 6942
+		division_template = "Pesadijska divizija"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+
+	division= {	
+		name = "Rezervna milicija"
+		location = 6942
+		division_template = "Rezervna milicija"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+	}
+
+	division= {	
+		name = "Rezervna milicija"
+		location = 6942
+		division_template = "Rezervna milicija"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+}	
+
+air_wings = {
+	### Zračne snage Bosne = Bosnian Airforce
+	104 = { 
+		fighter_equipment_0 = {
+			owner = "BOS" 
+			amount = 16 # Velldog: Not sure how many is balanced 
+		}
+	}	
+}
