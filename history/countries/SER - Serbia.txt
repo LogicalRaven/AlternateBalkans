@@ -1,10 +1,6 @@
 ﻿capital = 107
 
-<<<<<<< HEAD
 oob = "SER_1936"
-=======
-oob = "YUG_1936"
->>>>>>> 038606e4d4b9fc887d5bc81c0ec9fa1d3ba68ab1
 
 set_research_slots = 3
 
@@ -156,7 +152,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Milan Nedic"
+	name = "Milan Nedić"
 	desc = ""
 	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
 	expire = "1965.1.1"
@@ -167,7 +163,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Peter Karadordevic"
+	name = "Peter Karađorđević"
 	desc = ""
 	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
 	expire = "1965.1.1"
@@ -178,7 +174,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Zivorad Jovanovic"
+	name = "Živorad Jovanović"
 	desc = ""
 	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
 	expire = "1965.1.1"
