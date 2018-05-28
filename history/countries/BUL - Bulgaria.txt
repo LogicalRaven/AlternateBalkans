@@ -103,7 +103,6 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
-
 1939.1.1 = {
 	set_politics = {
 
