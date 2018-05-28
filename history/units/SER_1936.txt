@@ -69,7 +69,7 @@ units = {
 	division = {
 		name = "Senta"
 		division_template = "Pešadijska Brigada"
-		location = 11580
+		location = 646
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.3
 	}
