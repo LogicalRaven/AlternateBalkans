@@ -1,0 +1,21 @@
+state={
+	id=774
+	name="STATE_774"
+	manpower = 206400
+
+	state_category = town
+
+	history = {
+		owner = CRO
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		add_core_of = CRO
+		add_core_of = SER
+	}
+	provinces={
+		11580 
+	}
+	buildings_max_level_factor=1.000
+}
