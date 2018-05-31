@@ -1,23 +1,24 @@
+
 state={
 	id=73
 	name="STATE_73"
-	manpower = 854300
-	
-	state_category = rural
-	
+
 	history={
 		owner = ROM
 		buildings = {
 			infrastructure = 5
+
 		}
 		add_core_of = CZE
 		add_claim_by = HUN
 		add_core_of = ROM
 
-		
 	}
 
 	provinces={
-		3548 6571 9563 11536 11691 
+		3548 6571 6604 9563 11536 
 	}
+	manpower=854300
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

@@ -1,10 +1,6 @@
 ﻿capital = 107
-#test
-<<<<<<< HEAD
+
 oob = "SER_1936"
-=======
-oob = "YUG_1936"
->>>>>>> 038606e4d4b9fc887d5bc81c0ec9fa1d3ba68ab1
 
 set_research_slots = 3
 
@@ -18,6 +14,7 @@ set_technology = {
 	tech_mountaineers = 1
 	early_fighter = 1
 	gwtank = 1
+	gw_artillery = 1
 	basic_light_tank = 1
 	infantry_weapons = 1
 	infantry_weapons1 = 1
@@ -156,7 +153,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Milan Nedic"
+	name = "Milan Nedić"
 	desc = ""
 	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
 	expire = "1965.1.1"
@@ -167,7 +164,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Peter Karadordevic"
+	name = "Peter Karađorđević"
 	desc = ""
 	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
 	expire = "1965.1.1"
@@ -178,7 +175,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Zivorad Jovanovic"
+	name = "Živorad Jovanović"
 	desc = ""
 	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
 	expire = "1965.1.1"
@@ -186,4 +183,86 @@ create_country_leader = {
 	traits = {
 		#
 	}
+}
+
+#========= Generals and Field Marshals =========#
+
+create_field_marshal = {
+	name = "Danilo Kalafatović"
+	traits = { old_guard }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Dimitrije Ljotić"
+	#No portrait yet
+	#portrait_path = ""
+	traits = { 
+				defensive_doctrine 
+				politically_connected 
+			}
+	skill = 3
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Vojislav Lukačević"
+	#portrait_path = ""
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Draža Mihailović"
+	traits = { 
+				war_hero 
+				infantry_officer 
+				old_guard
+			}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Kosta Mušicki"
+	traits = { }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Milan Nedić"
+	traits = { career_officer }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Dušan Simović"
+	traits = { brilliant_strategist }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
 }

@@ -1,8 +1,8 @@
 #reload countrycolors
 
 BOS = {
-	color = RGB { 16 16 151 }
-	color = RGB { 16 16 151 }
+	color = RGB { 163 121 102 }
+	color = RGB { 163 121 102 }
 	
 }
 
@@ -365,8 +365,8 @@ SYR = {
 }
 
 SER = {
-	color = rgb { 160 110 110 }
-	color_ui = rgb { 160 110 110 }
+	color = rgb { 72 73 126 }
+	color = rgb { 72 73 126 }
 }
 
 ICE = {

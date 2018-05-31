@@ -4,20 +4,20 @@ state={
 	name="STATE_736"
 
 	history={
-		owner = AUS
-		add_core_of = AUS
+		owner = ITA
 		add_core_of = ITA
 		buildings = {
-			infrastructure = 2
+			infrastructure = 4
+			industrial_complex = 1
 
 		}
 
 	}
 
 	provinces={
-		3657 
+		6631 9598 
 	}
-	manpower=45159
+	manpower=405159
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=large_town
 }

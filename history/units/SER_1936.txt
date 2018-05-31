@@ -1,84 +1,111 @@
 division_template = {
-			name = Pesadijska Divizija
-			division_names_group = SER_INF_01
+	name = "Pešadijska Divizija"
+	division_names_group = SER_INF_01
 			
-			regiments = {
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
-					infantry = { x = 0 y = 2 }
-					infantry = { x = 1 y = 0 }
-					infantry = { x = 1 y = 1 }
-					infantry = { x = 1 y = 2 }
-			
-			}
-			
-<<<<<<< HEAD
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}		
+	support = {
+        engineer = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
 	}
-=======
 }
->>>>>>> 20dc1f748b2454704ed4088b4ae2692f5b32d375
+
 division_template = {
-			name = Konjicka divizija
-			division_names_group = SER_CAV_01
-			
-			regiments = {
-					cavalry = { x = 0 y = 0 }
-					cavalry = { x = 0 y = 1 }
-					cavalry = { x = 0 y = 2 }
-						
-<<<<<<< HEAD
-				}
-		}
-=======
-			}
+	name = "Pešadijska Brigada" # Infantry Detachment, brigade strength
+	division_names_group = SER_INF_02
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
 }
->>>>>>> 20dc1f748b2454704ed4088b4ae2692f5b32d375
+
+division_template = {
+	name = "Konjicka Divizija"
+	division_names_group = SER_CAV_01
+		
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
 
 units = {
-
-		division = {
-				name = "1. Brigada Kopnene Vojske"
-				division_name = {    # New syntax for compatibility with name lists
-					is_name_ordered = yes
-					name_order = 1
-				}
-				location = 11787
-				division_template = "Pesadijska Divizija"
-				start_experience_factor = 0.3
-			}
-		division = {
-				name = "2. Brigada Kopnene Vojske"
-				division_name = {    # New syntax for compatibility with name lists
-					is_name_ordered = yes
-					name_order = 2
-				}
-				location = 6998
-				division_template = "Pesadijska Divizija"
-				start_experience_factor = 0.3
-			}			
-		division = {
-				name = "3. Brigada Kopnene Vojske"
-				division_name = {    # New syntax for compatibility with name lists
-					is_name_ordered = yes
-					name_order = 3
-				}
-				location = 3649
-				division_template = "Pesadijska Divizija"
-				start_experience_factor = 0.3
-			}
-		division = {
-				name = "4. Konjicka divizija"
-				division_name = {    # New syntax for compatibility with name lists
-					is_name_ordered = yes
-					name_order = 4
-				}
-				location = 11586
-				division_template = "Konjicka divizija"
-				start_experience_factor = 0.3
-			}
-		}
-<<<<<<< HEAD
-	
-=======
+	division = {
+		name = "7. Potiska"
+		location = 6643
+		division_template = "Pešadijska Divizija"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
 	}
->>>>>>> 20dc1f748b2454704ed4088b4ae2692f5b32d375
+
+	division = { # "3. Cavalry Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 662
+		division_template = "Konjicka Divizija"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+
+	division = {
+		name = "Senta"
+		division_template = "Pešadijska Brigada"
+		location = 646
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+
+	division = {
+		name = "Sombor"
+		division_template = "Pešadijska Brigada"
+		location = 11586
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+}
+
+# Vazduhoplovna Izvidjacko Grupa
+# Air OOB
+air_wings = {
+	
+	107 = { # Ruma
+		tac_bomber_equipment_0 = {
+			owner = "SER"
+			creator = "FRA"
+			amount = 15
+		}
+		name = "Ruma"
+	}
+}
+
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "SER"
+		}
+		requested_factories = 1
+		progress = 0.54
+		efficiency = 50
+	}
+}

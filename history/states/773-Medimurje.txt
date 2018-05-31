@@ -1,0 +1,17 @@
+state={
+	id=773
+	name="STATE_773"
+	history = {
+		owner = SLV
+		add_core_of = SLV
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces={
+		6672 
+	}
+	manpower=76800
+	state_category=rural
+	buildings_max_level_factor=1.000
+}
