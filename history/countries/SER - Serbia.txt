@@ -42,7 +42,7 @@ set_technology = {
 	complete_national_focus = construction_effort
 	complete_national_focus = production_effort
 	
-	oob = "YUG_1939"
+	#oob = "YUG_1939"
 	set_technology = {
 		fighter1 = 1
 		early_bomber = 1
@@ -144,7 +144,7 @@ set_stability = 0.6
 create_country_leader = {
 	name = "Draza Mihailovic"
 	desc = ""
-	picture = "Portrait_Yugoslavia_Prince_Paul.dds"
+	picture = "gfx/leaders/SER/Portrait_SER_Draza_Mihailovic.tga"
 	expire = "1965.1.1"
 	ideology = conservatism
 	traits = {
@@ -155,7 +155,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Milan Nedić"
 	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+	picture = "gfx/leaders/SER/Portrait_SER_Milan_Nedic.tga"
 	expire = "1965.1.1"
 	ideology = fascism_ideology
 	traits = {
@@ -166,7 +166,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Peter Karađorđević"
 	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+	picture = "gfx/leaders/SER/Portrait_SER_Peter_ii.tga"
 	expire = "1965.1.1"
 	ideology = Despotism
 	traits = {
@@ -189,8 +189,9 @@ create_country_leader = {
 
 create_field_marshal = {
 	name = "Danilo Kalafatović"
+	portrait_path = "gfx/leaders/SER/Portrait_SER_Danilo_Kalafatovic.tga"
 	traits = { old_guard }
-	skill = 4
+	skill = 3
 	attack_skill = 2
 	defense_skill = 2
 	planning_skill = 3
@@ -199,13 +200,12 @@ create_field_marshal = {
 
 create_corps_commander = {
 	name = "Dimitrije Ljotić"
-	#No portrait yet
-	#portrait_path = ""
+	portrait_path = "gfx/leaders/SER/Portrait_SER_Dimitrije_Ljotic.tga"
 	traits = { 
 				defensive_doctrine 
 				politically_connected 
 			}
-	skill = 3
+	skill = 2
 	attack_skill = 1
 	defense_skill = 2
 	planning_skill = 2
@@ -214,9 +214,9 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Vojislav Lukačević"
-	#portrait_path = ""
+	portrait_path = "gfx/leaders/SER/Portrait_SER_Vojislav_Lukacevic.tga"
 	traits = { }
-	skill = 2
+	skill = 1
 	attack_skill = 2
 	defense_skill = 1
 	planning_skill = 1
@@ -225,12 +225,13 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Draža Mihailović"
+	portrait_path = "gfx/leaders/SER/Portrait_SER_Draza_Mihailovic.tga"
 	traits = { 
 				war_hero 
 				infantry_officer 
 				old_guard
 			}
-	skill = 3
+	skill = 2
 	attack_skill = 3
 	defense_skill = 2
 	planning_skill = 1
@@ -239,8 +240,9 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Kosta Mušicki"
+	portrait_path = "gfx/leaders/SER/Portrait_SER_Kosta_Musicki.tga"
 	traits = { }
-	skill = 2
+	skill = 1
 	attack_skill = 1
 	defense_skill = 1
 	planning_skill = 1
@@ -249,8 +251,9 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Milan Nedić"
+	portrait_path = "gfx/leaders/SER/Portrait_SER_Milan_Nedic.tga"
 	traits = { career_officer }
-	skill = 2
+	skill = 1
 	attack_skill = 1
 	defense_skill = 2
 	planning_skill = 2
@@ -259,10 +262,21 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Dušan Simović"
+	portrait_path = "gfx/leaders/SER/Portrait_SER_Dusan_Simovic.tga"
 	traits = { brilliant_strategist }
-	skill = 3
+	skill = 2
 	attack_skill = 2
 	defense_skill = 2
 	planning_skill = 3
 	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Miloš Vojnović Lautner"
+	portrait_path = "gfx/leaders/SER/Portrait_SER_Milos_Vojnovic_Lautner.tga"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
 }
