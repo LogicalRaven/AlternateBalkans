@@ -1,6 +1,6 @@
 ﻿capital = 104
 
-oob = "YUG_1936"
+oob = "BOS_1936"
 
 set_research_slots = 3
 
@@ -87,3 +87,68 @@ set_politics = {
 set_war_support = 0.5
 set_stability = 0.5
 
+create_country_leader = {
+	name = "Mehmed Spaho"
+	#picture = 
+	# He died in 1939
+	expire = "1939.06.29"
+	ideology = centrism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Vojislav Kecmanović"
+	#picture = 
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Vladimir Perić"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "Jezdimir Dangić"
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_field_marshal = {
+	name = "Muhamed Hadžiefendić"
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Husein Miljković"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Ferid Džanić"
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
