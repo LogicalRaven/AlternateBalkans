@@ -1,28 +1,22 @@
 ﻿capital = 102
 
-oob = "YUG_1936"
+oob = "SLV_1936"
 
 set_research_slots = 3
 
 
 add_ideas = {
-	anti_german_military
+	#anti_german_military
 }
 
 set_technology = {
 	tech_support = 1		
 	tech_engineers = 1
 	tech_mountaineers = 1
-	early_fighter = 1
-	gwtank = 1
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	interwar_antitank = 1
 	gw_artillery = 1
-	early_destroyer = 1
-	early_light_cruiser = 1
-	early_submarine = 1
-	superior_firepower = 1
 }
 
 1939.1.1 = {
@@ -86,7 +80,7 @@ set_technology = {
 	complete_national_focus = production_effort
 	}
 	
-	oob = "YUG_1939"
+	#oob = "YUG_1939"
 	set_technology = {
 		fighter1 = 1
 		early_bomber = 1
@@ -182,21 +176,12 @@ set_politics = {
 set_war_support = 0.5
 set_stability = 0.5
 
-create_country_leader = {
-	name = "Prince Paul"
-	desc = "POLITICS_PRINCE_PAUL_DESC"
-	picture = "Portrait_Yugoslavia_Prince_Paul.dds"
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-		#
-	}
-}
+#### Politicians ####
 
 create_country_leader = {
-	name = "Milan Stojadinović"
-	desc = "POLITICS_MILAN_STOJADINOVIC_DESC"
-	picture = "gfx/leaders/YUG/Portrait_Yugoslavia_Milan_Stojadinovic.dds"
+	name = "Leon Rupnik"
+	#desc = ""
+	#picture = ""
 	expire = "1965.1.1"
 	ideology = fascism_ideology
 	traits = {
@@ -205,67 +190,61 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Milan Grol"
-	desc = "POLITICS_MILAN_GROL_DESC"
-	picture = "gfx/leaders/YUG/Portrait_Yugoslavia_Milan_Grol.dds"
+	name = "Juro Adlešič"
+	desc = ""
+	picture = "gfx/leaders/SLV/Portrait_Slovenia_Juro_Adlesic.tga"
 	expire = "1965.1.1"
-	ideology = liberalism
+	ideology = centrism
 	traits = {
 		#
 	}
 }
 
 create_country_leader = {
-	name = "Josip Broz Tito"
-	desc = "POLITICS_JOSIP_BROZ_TITO_DESC"
-	picture = "Portrait_Yugoslavia_Josip_Broz_Tito.dds"
+	name = "Boris Kidrič"
+	#desc = ""
+	picture = "gfx/leaders/SLVPortrait_Slovenia_Boris_Kidric.tga"
 	expire = "1965.1.1"
-	ideology = leninism
+	ideology = stalinism
 	traits = {
 		#
 	}
 }
 
-create_corps_commander = {
-	name = "Vladimir Čukavac"
-	gfx = GFX_Portrait_yugoslavia_vladimir_cukavac
-	traits = { trickster  }
-	skill = 3
-
-}
+#### Generals ####
 
 create_corps_commander = {
-	name = "Ivan Gošnjak"
-	gfx = GFX_Portrait_yugoslavia_ivan_gosnjak
-	traits = { urban_assault_specialist }
-	skill = 3
-	
-}
-
-create_field_marshal = {
-	name = "Danilo Kalafatović"
-	gfx = GFX_Portrait_yugoslavia_danilo_kalafatovic
+	name = "Vladimir Vauhnik"
 	traits = {  }
 	skill = 2
 }
 
-create_field_marshal = {
-	name = "Milutin Nedić"
-	gfx = GFX_Portrait_yugoslavia_milutin_nedic
-	traits = { thorough_planner }
-	skill = 3	
+create_corps_commander = {
+	name = "Čedomir Stanojlović"
+	traits = { }
+	skill = 1
 }
 
 create_corps_commander = {
-	name = "Petar Kosić"
-	gfx = GFX_Portrait_yugoslavia_petar_kosic
-	traits = {  }
-	skill = 2
+	name = "Dragiša Pandurović"
+	traits = { }
+	skill = 1
 }
 
-create_navy_leader = {
-	name = "Marijan Polić"
-	gfx = GFX_Portrait_yugoslavia_marijan_polic
+create_corps_commander = {
+	name = "Stojadin Milenković"
+	traits = { }
+	skill = 1
+}
+
+create_corps_commander = {
+	name = "Mihailo Lukić"
+	traits = { }
+	skill = 1
+}
+
+create_field_marshal = {
+	name = "Leon Rupnik"
 	traits = {  }
 	skill = 2
 }

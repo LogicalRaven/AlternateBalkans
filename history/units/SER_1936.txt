@@ -1,4 +1,4 @@
-division_template = {
+﻿division_template = {
 	name = "Pešadijska Divizija"
 	division_names_group = SER_INF_01
 			
