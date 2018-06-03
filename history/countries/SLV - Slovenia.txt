@@ -180,8 +180,8 @@ set_stability = 0.5
 
 create_country_leader = {
 	name = "Leon Rupnik"
-	#desc = ""
-	#picture = ""
+	#desc = "gfx/leaders/SLV/Portrait_SLV_Leon_Rupnik.tga"
+	picture = ""
 	expire = "1965.1.1"
 	ideology = fascism_ideology
 	traits = {
@@ -215,36 +215,66 @@ create_country_leader = {
 
 create_corps_commander = {
 	name = "Vladimir Vauhnik"
+	portrait_path = "gfx/leaders/SLV/Portrait_SLV_Vladimir_Vauhnik.tga"
 	traits = {  }
 	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
 }
 
 create_corps_commander = {
 	name = "Čedomir Stanojlović"
 	traits = { }
 	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
 }
 
 create_corps_commander = {
 	name = "Dragiša Pandurović"
 	traits = { }
 	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
 }
 
 create_corps_commander = {
 	name = "Stojadin Milenković"
 	traits = { }
 	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
 }
 
 create_corps_commander = {
 	name = "Mihailo Lukić"
+	portrait_path = "gfx/leaders/SLV/Portrait_SLV_Mihailo_Lukic.tga"
 	traits = { }
 	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
 }
 
 create_field_marshal = {
 	name = "Leon Rupnik"
-	traits = {  }
+	portrait_path = "gfx/leaders/SLV/Portrait_SLV_Leon_Rupnik.tga"
+	traits = { 
+				old_guard 
+				defensive_doctrine 
+			 }
 	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
 }

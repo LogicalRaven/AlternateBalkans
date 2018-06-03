@@ -89,7 +89,7 @@ set_stability = 0.5
 
 create_country_leader = {
 	name = "Mehmed Spaho"
-	#picture = 
+	picture = "gfx/leaders/BOS/Portrait_BOS_Mehmed_Spaho.tga"
 	# He died in 1939
 	expire = "1939.06.29"
 	ideology = centrism
@@ -100,7 +100,7 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Vojislav Kecmanović"
-	#picture = 
+	picture = "gfx/leaders/BOS/Portrait_BOS_Vojislav_Kecmanovic.tga"
 	expire = "1965.1.1"
 	ideology = leninism
 	traits = {
@@ -110,6 +110,7 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Vladimir Perić"
+	picture = "gfx/leaders/BOS/Portrait_BOS_Vladimir_Peric.tga"
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {
@@ -117,8 +118,11 @@ create_country_leader = {
 	}
 }
 
+#### Generals ####
+
 create_corps_commander = {
 	name = "Jezdimir Dangić"
+	portrait_path = "gfx/leaders/BOS/Portrait_BOS_Jezdimir_Dangic.tga"
 	skill = 1
 	attack_skill = 1
 	defense_skill = 2
@@ -128,6 +132,7 @@ create_corps_commander = {
 
 create_field_marshal = {
 	name = "Muhamed Hadžiefendić"
+	portrait_path = "gfx/leaders/BOS/Portrait_BOS_Muhamed_Hadziefendic.tga"
 	skill = 1
 	attack_skill = 1
 	defense_skill = 1
@@ -137,6 +142,7 @@ create_field_marshal = {
 
 create_corps_commander = {
 	name = "Husein Miljković"
+	portrait_path = "gfx/leaders/BOS/Portrait_BOS_Husein_Miljkovic.tga"
 	skill = 1
 	attack_skill = 2
 	defense_skill = 1
