@@ -136,6 +136,7 @@ navy = {
 	name = "Hrvatski Ratna Mornarica"
 	base = 3924
 	location = 3924 # Split
+	ship = { name = "KB Dalmacija" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CRO } } }
 	ship = { name = "HRM Dubrovnik" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CRO } } }
 	ship = {
 		name = "HRM Beograd"
@@ -164,7 +165,6 @@ navy = {
 	base = 6889
 	location = 6889
 	# Podmornica Divizija
-	ship = { name = "KB Hvar" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CRO } 
 	ship = { name = "KB Hrabri" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CRO } } }
 	ship = { name = "KB Nebojsa" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CRO } } }				
 	ship = { name = "KB Smeli" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CRO } } }				
