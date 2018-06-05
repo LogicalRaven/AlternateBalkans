@@ -115,3 +115,59 @@ units = {
 }
 
 
+air_wings = {
+	109 = { 		
+		fighter_equipment_0 =  {		# Hawker Hurricane Mk I fighters
+			owner = "ENG" 
+			amount = 13
+		}
+		name = ""
+		ace={ # Order is important. Ace will be assigned to the wing above (fighter_equipment_0).
+			modifier="fighter_genius"
+			name="Mato"
+			surname="Dukovac"
+			callsign="Mato"
+			portrait=1 # GFX_CRO_ace_Mato_Dukovac
+		}
+	}
+}
+
+navy = {
+	name = "Hrvatski Ratna Mornarica"
+	base = 3924
+	location = 3924 # Split
+	ship = { name = "KB Dalmacija" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CRO } } }
+	ship = { name = "HRM Dubrovnik" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CRO } } }
+	ship = {
+		name = "HRM Beograd"
+		definition = destroyer
+		equipment = {
+			destroyer_1 = {
+				amount = 1
+				owner = CRO
+			}
+		}
+	}
+	ship = {
+		name = "HRM Zagreb"
+		definition = destroyer
+		equipment = {
+			destroyer_1 = {
+				amount = 1
+				owner = CRO
+			}
+		}
+	}
+}
+
+navy = {
+	name = "1. Hrvatski Podmornica Divizija"
+	base = 6889
+	location = 6889
+	# Podmornica Divizija
+	ship = { name = "KB Hrabri" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CRO } } }
+	ship = { name = "KB Nebojsa" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CRO } } }				
+	ship = { name = "KB Smeli" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CRO } } }				
+	ship = { name = "KB Osvetnik" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CRO } 
+}
+
