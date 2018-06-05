@@ -1,4 +1,4 @@
-capital = 109
+﻿capital = 109
 
 set_research_slots = 2
 
@@ -84,7 +84,7 @@ set_politics = {
 		}
 	}
 	
-	ruling_party = fascism
+	ruling_party = neutrality
 	last_election = "1935.6.9"
 	election_frequency = 48
 	elections_allowed = yes # none after offset 1
@@ -109,7 +109,7 @@ set_politics = {
 				popularity = 68
 			}
 		}
-		ruling_party = fascism
+		ruling_party = neutrality
 		last_election = "1935.6.9"
 		election_frequency = 12
 		elections_allowed = no # none after offset 1
@@ -163,7 +163,7 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Pavle Gregorić"
-	ideology = marxist
+	ideology = marxism
 	#desc = ""
 	#picture
 	expire = "1965.1.1"
@@ -200,6 +200,9 @@ create_field_marshal = {
 
 create_corps_commander = {
 	name = "Ivan Babić"
+	traits = {
+		#
+	}
 	skill = 1
 	attack_skill = 1
 	defense_skill = 1
@@ -209,6 +212,9 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Đuro Kladarin"
+	traits = {
+		#
+	}
 	skill = 1
 	attack_skill = 1
 	defense_skill = 1
@@ -228,6 +234,9 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Rafael Boban"
+	traits = {
+		#
+	}
 	skill = 1
 	attack_skill = 1
 	defense_skill = 1
@@ -273,6 +282,9 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Tomislav Sertić"
+	traits = {
+		#
+	}
 	skill = 1
 	attack_skill = 1
 	defense_skill = 1
@@ -302,9 +314,10 @@ create_navy_leader = {
 }
 
 create_navy_leader = {
-	name "Mirko Dabovic"
+	name = "Mirko Dabovic"
+	#gfx
 	traits = {
-		sea_wolf
+		seawolf
 	}
-	skill = 1
+	skill = 2
 }
