@@ -1,9 +1,35 @@
-#Croatia
-aleksandar_ehrmann:0 "Aleksandar Ehrmann"
-duro_dakovic:0 "Đuro Đaković"
+﻿#Croatia
+CRO_aleksandar_ehrmann:0 "Aleksandar Ehrmann"
+CRO_duro_dakovic:0 "Đuro Đaković"
+CRO_jadransko_brodogradiliste:0 "Jadransko Brodogradiliste"
+CRO_josip_broz_tito:0 "Josip Broz Tito"
+CRO_marijan_polic:0 "Marijan Polić"
+CRO_mihajlo_lukic:0 "Mihajlo Lukić"
+CRO_ivan_ribar:0 "Ivan Ribar"
+CRO_ivo_lola_ribar:0 "Ivo Lola Ribar"
 
 #Slovenia
-radiotelevizija_slovenija:0 "Radiotelevizija Slovenija"
-slovenija_tehnika:0 "Slovenija ceste Tehnika"
-salonit_anhovo:0 "Salonit Anhovo"
-ravne:0 "Tehnični Biro Ravne"
+SLV_radiotelevizija_slovenija:0 "Radiotelevizija Slovenija"
+SLV_slovenija_tehnika:0 "Slovenija ceste Tehnika"
+SLV_salonit_anhovo:0 "Salonit Anhovo"
+SLV_ravne:0 "Tehnični Biro Ravne"
+SLV_leon_rupnik:0 "Leon Rupnik"
+SLV_army_chief_leon_rupnik:0 "Leon Rupnik"
+
+
+#Serbia
+SER_ikarus:0 "Ikarus"
+SER_rogozarski:0 "Rogozarksi"
+SER_zmaj:0 "Zmaj"
+SER_zastava_arms:0 "Zastava Arms"
+SER_milutin_nedic:0 "Milutin Nedić"
+SER_draza_mihailovic:0 "Draža Mihailović"
+SER_dusan_simovic:0 "Dušan Simović"
+SER_ljubomir_maric:0 "Ljubomir Marić"
+SER_petar_vukcevic:0 "Petar Vukčević"
+SER_bogoljub_ilic:0 "Bogoljub Ilić"
+SER_danilo_kalafatovic:0 "Danilo Kalafatović"
+SER_borivoje_mirkovic:0 "Borivoje Mirković"
+SER_slobodan_jovanovic:0 "Slobodan Jovanović"
+SER_milan_nedic:0 "Milan Nedić"
+SER_dimitrije_ljotic:0 "Dimitrije Ljotić"

@@ -1,7 +1,7 @@
 ideas = {
 
 	political_advisor = {
-		aleksandar_ehrmann = {
+		CRO_aleksandar_ehrmann = {
 			allowed = {
 				original_tag = CRO
 			}
@@ -11,11 +11,34 @@ ideas = {
 				factor = 2
 			}
 		}
+		
+		CRO_ivan_ribar = {
+
+			picture = generic_political_advisor_europe_5
+
+			allowed = {
+				original_tag = CRO
+			}
+			
+			traits = { captain_of_industry }
+		}
+		
+		CRO_ivo_lola_ribar = {
+
+			picture = generic_communist_europe
+			
+			allowed = {
+				original_tag = CRO
+			}
+			
+			traits = { communist_revolutionary }
+		}
 	}
+	
 
 	materiel_manufacturer = {
 		#The real name should be "Prva jugoslavenska tvornica vagona strojeva i mostova dd Brod na Savi" but that is too long
-		duro_dakovic = {
+		CRO_duro_dakovic = {
 			allowed = {
 				original_tag = CRO
 			}
@@ -36,13 +59,13 @@ ideas = {
 		
 		designer = yes
 		
-		jadransko_brodogradiliste = {
+		CRO_jadransko_brodogradiliste = {
 			
 			picture = generic_naval_manufacturer_2
 
 			
 			allowed = {
-				original_tag = YUG
+				original_tag = CRO
 			}
 			
 			research_bonus = {
@@ -58,6 +81,84 @@ ideas = {
 			modifier = {
 				#
 			}
+		}
+		
+		CRO_brodosplit = {
+			picture = generic_naval_manufacturer_1
+
+			
+			allowed = {
+				original_tag = CRO
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			equipment_bonus = {
+				# generic shipyard?
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+			
+			modifier = {
+				#
+			}	
+		}
+	}
+	
+	#Military
+	army_chief = {
+		CRO_josip_broz_tito = {
+			
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = CRO
+			}
+			
+
+			
+			traits = { army_chief_morale_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	high_command = {
+		CRO_mihajlo_lukic = {
+			
+			picture = generic_army_europe_2
+
+			allowed = {
+				original_tag = CRO
+			}
+			
+			
+			traits = { army_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	theorist = {
+		CRO_marijan_polic = {
+					
+			allowed = {
+				original_tag = CRO
+			}
+			
+			picture = generic_political_advisor_europe_2
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
 		}
 	}
 }
