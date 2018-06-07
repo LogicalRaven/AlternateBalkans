@@ -1,0 +1,107 @@
+ideas = {
+	aircraft_manufacturer = { 
+		
+		designer = yes
+		
+		ikarus = {
+			
+			picture = generic_air_manufacturer_3
+
+			allowed = {
+				original_tag = SER
+				#NOT = { has_dlc = "Death or Dishonor" }		
+			}
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# produced under licence: Hawker Fury, Potez 25, Avia BH-33, own flying boats and recon aircrafts
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		rogozarski = {
+			
+			picture = generic_air_manufacturer_2
+
+			allowed = {
+				original_tag = CRO
+				#NOT = { has_dlc = "Death or Dishonor" }
+			}
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# trainers and fighter airplanes Rogozarski PVT
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+		zmaj = {
+			
+			picture = generic_air_manufacturer_1
+
+			allowed = {
+				original_tag = SER
+				#NOT = { has_dlc = "Death or Dishonor" }
+			}
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# trainers and bombers
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	materiel_manufacturer = {
+			
+		designer = yes
+		
+		zastava_arms = {
+			
+			picture = generic_infantry_equipment_manufacturer_3
+
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			equipment_bonus = {
+				# trainers and bombers
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}
