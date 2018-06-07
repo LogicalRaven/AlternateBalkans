@@ -1,0 +1,60 @@
+ideas = {
+	industrial_concern = {
+		radiotelevizija_slovenija = {
+			allowed = {
+				original_tag = SLV
+			}
+			
+			research_bonus = {
+				electronics = 0.10
+			}
+			
+			traits = { electronics_concern }
+		}
+		#Slovenija ceste Tehnika wasn't started until 1943. So including it in 1936 is ahistorical. Is that OK?
+		slovenija_tehnika = {
+			allowed = {
+				original_tag = SLV
+			}
+
+			research_bonus = {
+				industry = 0.10
+			}
+
+			traits = { industrial_concern }
+		}
+
+		#Salonit Anhovo was a cement company from 1921. Maybe this is a better choice than Slovenija Tehnika...
+		salonit_anhovo = {
+			allowed = {
+				original_tag = SLV
+			}
+
+			research_bonus = {
+				industry = 0.10
+			}
+
+			traits = { industrial_concern }
+		}
+	}
+
+	#Not an actual arms manufacturer but it seems likely that they would have produced arms back in the 20th century.
+	#There is the modern Tehnični Biro Ravne company which is an actual mortar and artillery manufacturer...
+	materiel_manufacturer = {
+		ravne = {
+			allowed = {
+				original_tag = SLV
+			}
+			
+			research_bonus = {
+				artillery = 0.10
+			}
+			
+			traits = { artillery_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+	}
+}
