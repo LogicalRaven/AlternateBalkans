@@ -49,8 +49,7 @@ air_wings = {
 	#Zagreb
 	109 = { 		
 		fighter_equipment_0 =  { #Hawker Hurricanes Mk. 1
-			owner = "CRO"
-			creator = "ENG" 
+			owner = "ENG" 
 			amount = 13
 		}
 		name = "Fighter Squadron 2"
