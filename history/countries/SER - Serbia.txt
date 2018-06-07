@@ -198,6 +198,21 @@ create_field_marshal = {
 	logistics_skill = 3
 }
 
+create_field_marshal = {
+	name = "Ljubomir Marić"
+	#portrait_path = "gfx/leaders/SER/"
+	traits = {
+		war_hero 
+		infantry_officer
+		old_guard
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
 create_corps_commander = {
 	name = "Dimitrije Ljotić"
 	portrait_path = "gfx/leaders/SER/Portrait_SER_Dimitrije_Ljotic.tga"
@@ -229,7 +244,8 @@ create_corps_commander = {
 	traits = { 
 				war_hero 
 				infantry_officer 
-				old_guard
+				trickster
+				defensive_doctrine
 			}
 	skill = 2
 	attack_skill = 3
@@ -274,6 +290,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Miloš Vojnović Lautner"
 	portrait_path = "gfx/leaders/SER/Portrait_SER_Milos_Vojnovic_Lautner.tga"
+	traits = { # }
 	skill = 1
 	attack_skill = 2
 	defense_skill = 1
