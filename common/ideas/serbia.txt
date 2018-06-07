@@ -1,9 +1,46 @@
 ideas = {
+
+	political_advisor = {
+
+		SER_slobodan_jovanovic = {
+
+			picture = generic_political_advisor_europe_1
+			
+			allowed = {
+				original_tag = SER
+			}
+			
+			traits = { popular_figurehead }
+		}
+		
+		SER_milan_nedic = {
+
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = SER
+			}
+			
+			traits = { prince_of_terror }
+		}
+		
+		SER_dimitrije_ljotic = {
+
+			picture = generic_fascist_europe
+			
+			allowed = {
+				original_tag = SER
+			}
+			
+			traits = { fascist_demagogue }
+		}
+	}
+
 	aircraft_manufacturer = { 
 		
 		designer = yes
 		
-		ikarus = {
+		SER_ikarus = {
 			
 			picture = generic_air_manufacturer_3
 
@@ -27,7 +64,7 @@ ideas = {
 			}
 		}
 
-		rogozarski = {
+		SER_rogozarski = {
 			
 			picture = generic_air_manufacturer_2
 
@@ -52,7 +89,7 @@ ideas = {
 		}
 
 
-		zmaj = {
+		SER_zmaj = {
 			
 			picture = generic_air_manufacturer_1
 
@@ -80,7 +117,7 @@ ideas = {
 			
 		designer = yes
 		
-		zastava_arms = {
+		SER_zastava_arms = {
 			
 			picture = generic_infantry_equipment_manufacturer_3
 
@@ -104,4 +141,149 @@ ideas = {
 			}
 		}
 	}
+	
+	#military
+	army_chief = {
+
+		SER_milutin_nedic = {
+			
+			picture = generic_army_europe_6
+			
+			allowed = {
+				original_tag = SER
+			}
+			
+
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		SER_draza_mihailovic = {
+			
+			picture = generic_army_europe_3
+			
+			allowed = {
+				original_tag = SER
+			}
+			
+
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+	}
+	
+	air_chief = {
+		SER_petar_vukcevic = {
+			
+			picture = generic_air_europe_2
+			
+			allowed = {
+				original_tag = SER
+			}
+			
+
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		SER_dusan_simovic = {
+
+			
+			allowed = {
+				original_tag = SER
+			}
+						
+			traits = { air_air_combat_training_2 }
+			
+			ai_will_do = {
+				factor = 2
+			}
+		}
+	}
+	
+	navy_chief = {
+
+		SER_bogoljub_ilic = {
+			
+			picture = generic_navy_europe_2
+			
+			allowed = {
+				original_tag = SER
+			}
+			
+
+			
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	high_command = {
+
+		SER_danilo_kalafatovic = {
+			
+			picture = generic_army_europe_3
+			
+			allowed = {
+				original_tag = SER
+			}
+			
+			
+			traits = { army_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		SER_borivoje_mirkovic = {
+			
+			picture = generic_air_europe_2
+			
+			allowed = {
+				original_tag = SER
+			}
+			
+
+			traits = { air_bomber_interception_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	theorist = {
+		SER_ljubomir_maric = {
+					
+					
+			allowed = {
+				original_tag = SER
+			}
+			
+			picture = generic_army_europe_5
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+	}
+	
 }
