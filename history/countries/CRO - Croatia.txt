@@ -293,6 +293,19 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
+	name = "Mihailo Lukić"
+	portrait_path = "gfx/leaders/SLV/Portrait_SLV_Mihailo_Lukic.tga"
+	traits = { 
+		#
+	}
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
 	name = "Vjekoslav Servatzy"
 	traits = {
 		war_hero
