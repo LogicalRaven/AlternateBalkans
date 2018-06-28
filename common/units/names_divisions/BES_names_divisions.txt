@@ -1,0 +1,74 @@
+﻿BES_INF_01 = 
+{
+	name = "Infantry Divisions"
+
+	for_countries = { BES }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d. Infanterie de Basarabia"
+
+	ordered =
+	{
+		1 = { "%d. Infanterie de Basarabia" }
+		2 = { "%d. Infanterie de Basarabia" }
+		3 = { "%d. Infanterie de Basarabia" }
+		4 = { "%d. Infanterie de Basarabia" }
+		5 = { "%d. Infanterie de Basarabia" }
+		6 = { "%d. Infanterie de Basarabia" }
+		7 = { "%d. Infanterie de Basarabia" }
+		8 = { "%d. Infanterie de Basarabia" }
+		9 = { "%d. Infanterie de Basarabia" }
+		10 = { "%d. Infanterie de Basarabia" }
+		11 = { "%d. Infanterie de Basarabia" }
+		12 = { "%d. Infanterie de Basarabia" }
+		13 = { "%d. Infanterie de Basarabia" }
+		14 = { "%d. Infanterie de Basarabia" }
+		15 = { "%d. Infanterie de Basarabia" }
+		16 = { "%d. Infanterie de Basarabia" }
+		17 = { "%d. Infanterie de Basarabia" }
+		18 = { "%d. Infanterie de Basarabia" }
+		19 = { "%d. Infanterie de Basarabia" }
+		20 = { "%d. Infanterie de Basarabia" }
+
+	}
+}
+
+BES_INFB_01 = 
+{
+	name = "Militia Divisions"
+
+	for_countries = { BES }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d. Soldat din militie"
+
+	ordered =
+	{
+		1 = { "%d. Soldat din militie" }
+		2 = { "%d. Soldat din militie" }
+		3 = { "%d. Soldat din militie" }
+		4 = { "%d. Soldat din militie" }
+		5 = { "%d. Soldat din militie" }
+		6 = { "%d. Soldat din militie" }
+		7 = { "%d. Soldat din militie" }
+		8 = { "%d. Soldat din militie" }
+		9 = { "%d. Soldat din militie" }
+		10 = { "%d. Soldat din militie" }
+		11 = { "%d. Soldat din militie" }
+		12 = { "%d. Soldat din militie" }
+		13 = { "%d. Soldat din militie" }
+		14 = { "%d. Soldat din militie" }
+		15 = { "%d. Soldat din militie" }
+		16 = { "%d. Soldat din militie" }
+		17 = { "%d. Soldat din militie" }
+		18 = { "%d. Soldat din militie" }
+		19 = { "%d. Soldat din militie" }
+		20 = { "%d. Soldat din militie" }
+	}
+}

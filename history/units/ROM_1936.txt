@@ -9,24 +9,23 @@
 		infantry = { x = 0 y = 2 }
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
 		infantry = { x = 2 y = 0 }
 		infantry = { x = 2 y = 1 }
 		infantry = { x = 2 y = 2 }
 	}
 	support = {
-		artillery = { x = 0 y = 0 } 
-		engineer = { x = 0 y = 1 }   
+		artillery = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }   
 	}
 }
 division_template = {
-	name = "Divizia blindată"				# Armour Division
+	name = "Divizia de Cavalerie"				# Cavalry Division
 
-	division_names_group = ROM_ARM_01
+	division_names_group = ROM_CAV_01
 
 	regiments = {
-		light_armor = { x = 0 y = 0 }
-		light_armor = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
 		cavalry = { x = 1 y = 0 }
 		cavalry = { x = 1 y = 1 }
 	}
@@ -39,10 +38,8 @@ division_template = {
 	regiments = {
 		mountaineers = { x = 0 y = 0 }
 		mountaineers = { x = 0 y = 1 }
-		mountaineers = { x = 0 y = 2 }
 		mountaineers = { x = 1 y = 0 }
 		mountaineers = { x = 1 y = 1 }
-		mountaineers = { x = 1 y = 2 }
 	}
 	support = {
 		engineer = { x = 0 y = 0 }   
@@ -51,151 +48,117 @@ division_template = {
 
 
 units = {
+	#INFANTRY
 	division = {
 		#name = "Divizia 1 Infanterie"
 		division_name = {    
 			is_name_ordered = yes
 			name_order = 1
 		}
-		location = 9716
+		location = 6711
 		division_template = "Divizia de Infanterie"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.2
 	}
-
 	division = {
 		#name = "Divizia 2 Infanterie"
 		division_name = {    
 			is_name_ordered = yes
 			name_order = 2
 		}
-		location = 3663
+		location = 6711
 		division_template = "Divizia de Infanterie"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.2
 	}
-
 	division = {
 		#name = "Divizia 3 Infanterie"
 		division_name = {    
 			is_name_ordered = yes
 			name_order = 3
 		}
-		location = 674
+		location = 687
 		division_template = "Divizia de Infanterie"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.2
 	}
-
 	division = {
 		#name = "Divizia 4 Infanterie"
 		division_name = {    
 			is_name_ordered = yes
 			name_order = 4
 		}
-		location = 11636
+		location = 687
 		division_template = "Divizia de Infanterie"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.2
 	}
-
 	division = {
 		#name = "Divizia 5 Infanterie"
 		division_name = {    
 			is_name_ordered = yes
 			name_order = 5
 		}
-		location = 3076
+		location = 3663
 		division_template = "Divizia de Infanterie"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.2
 	}
-
 	division = {
 		#name = "Divizia 6 Infanterie"
 		division_name = {    
 			is_name_ordered = yes
 			name_order = 6
 		}
-		location = 6695
-		division_template = "Divizia de Infanterie"
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
-	}
-
-	division = {
-		#name = "Divizia 7 Infanterie"
-		division_name = {    
-			is_name_ordered = yes
-			name_order = 7
-		}
-		location = 6714
-		division_template = "Divizia de Infanterie"
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
-	}
-
-	division = {
-		#name = "Divizia 14 Infanterie"
-		division_name = {    
-			is_name_ordered = yes
-			name_order = 14
-		}
-		location = 3694
+		location = 9716
 		division_template = "Divizia de Infanterie"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.2
 	}
-
+	#CAVALRY
 	division = {
-		#name = "Divizia 15 Infanterie"
-		division_name = {    
-			is_name_ordered = yes
-			name_order = 15
-		}
-		location = 3694
-		division_template = "Divizia de Infanterie"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.2
-	}
-
-	division = {
-		#name = "Divizia 16 Infanterie"
-		division_name = {    
-			is_name_ordered = yes
-			name_order = 16
-		}
-		location = 3694
-		division_template = "Divizia de Infanterie"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.2
-	}
-
-	division = {
-		#name = "Divizia 1 blindată"
+		#name = "Divizia 1 Cavalerie"
 		division_name = {    
 			is_name_ordered = yes
 			name_order = 1
 		}
-		location = 660
-		division_template = "Divizia blindată"
-		start_equipment_factor = 0.3
-	}
-
-	division = {
-		name = "Echipa de alpinism"
 		location = 11605
-		division_template = "Echipa de alpinism"
+		division_template = "Divizia de Cavalerie"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.2
 	}
-
 	division = {
-		name = "Echipa de alpinism"
-		location = 6667
-		division_template = "Echipa de alpinism"
+		#name = "Divizia 2 Cavalerie"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 6695
+		division_template = "Divizia de Cavalerie"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.2
+	}
+	#MOUNTAINEERS
+	division = {
+		#name = "Echipa 1 alpinism"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6460
+		division_template = "Echipa de alpinism"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.4
+	}
+	navy = {					
+		name = "Fortele Navale Române"				
+		base = 687 
+		location = 687 #Romania's Corridor
+		ship = { name = "NMS Carol" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ROM } } }
+		ship = { name = "NMS Michael" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ROM } } }
+		ship = { name = "NMS Cluj" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ROM } } }
+		ship = { name = "NMS Bucharest" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ROM } } }
+		ship = { name = "NMS Bessarabia" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ROM } } }	
 	}
 }	
 
@@ -204,15 +167,45 @@ air_wings = {
 	79 = { 
 		fighter_equipment_0 = {
 			owner = "ROM" 
-			amount = 32 # Velldog: Not sure how many is balanced 
+			amount = 23
 		}
 	}	
 
 	89 = { 
 		fighter_equipment_0 = {
 			owner = "ROM" 
-			amount = 24 # Velldog: Not sure how many is balanced 
+			amount = 44
 		}
 	}	
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "ROM"
+		}
+		requested_factories = 2
+		progress = 0.22
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "ROM"
+		}
+		requested_factories = 1
+		progress = 0.56
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "ROM"
+		}
+		requested_factories = 1
+		progress = 0.56
+		efficiency = 100
+	}
 }
 
