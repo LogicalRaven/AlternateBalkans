@@ -1,0 +1,790 @@
+﻿focus_tree = {
+	id = hungary
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = HUN
+		}
+	}
+	default = no
+	focus = {
+		id = HUN_politicaldirection
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		x = 11
+		y = 0
+		completion_reward = {
+			add_political_power = 80
+		}
+
+	}
+	focus = {
+		id = HUN_supportdemocracy
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		mutually_exclusive = {
+			focus = HUN_supportgermany
+		}
+		x = 3
+		y = 2
+		completion_reward = {
+			remove_state_claim = {
+				is_claimed_by = HUN
+			}
+			add_popularity = {
+						ideology = democracy
+						popularity = 0.1
+					}
+		}
+	}
+	focus = {
+	#Event to France to revise Trianon
+	#No idea what that means
+		id = HUN_bledagreement
+		icon = GFX_goal_unknown
+		cost = 10.00
+		x = 25
+		y = 0
+		available = {
+			NOT = {
+				has_completed_focus = HUN_supportdemocracy
+			}
+		}
+		completion_reward = {
+		    FRA = {
+			    country_event = { id = hun.1 days = 1 }
+			}
+		}
+	}
+	focus = {
+		id = HUN_army
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		x = 33
+		y = 0
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+	focus = {
+		id = HUN_airforce
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		x = 41
+		y = 0
+		completion_reward = {
+			air_experience = 10
+		}
+
+	}
+	focus = {
+		id = HUN_navy
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		x = 48
+		y = 0
+		completion_reward = {
+			navy_experience = 10
+		}
+
+	}
+	focus = {
+	#At over 40% democratic support, democratic party will take over.
+		id = HUN_elections
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_supportdemocracy
+		}
+		x = 3
+		y = 3
+		available = {
+			democracy > 0.4
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = democracy
+				elections_allowed = yes
+			}
+		}
+	}
+	focus = {
+		id = HUN_joinallies
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_elections
+		}
+		mutually_exclusive = {
+			focus = HUN_balkanentente
+		}
+		x = 2
+		y = 4
+		
+		completion_reward = {
+			ENG = {
+				country_event = { id = hun.2 }
+			}
+		}
+	}
+	focus = {
+		id = BUL_alliedresearch
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_joinallies
+		}
+		x = 2
+		y = 5
+		
+	}
+	focus = {
+		id = HUN_balkanentente
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_elections
+		}
+		mutually_exclusive = {
+			focus = HUN_joinallies
+		}
+		x = 4
+		y = 4
+		
+		
+	}
+	focus = {
+		id = HUN_invitecroatiadem
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_balkanentente
+		}
+		x = 4
+		y = 5
+
+	}
+	focus = {
+		id = HUN_slovakianquestion
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_elections
+		}
+		x = 6
+		y = 4
+
+	}
+	focus = {
+		id = HUN_inviteromaniadem
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_balkanentente
+		}
+		x = 6
+		y = 5
+
+	}
+	focus = {
+		id = HUN_inviteserbiadem
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_balkanentente
+		}
+		x = 8
+		y = 5
+
+	}
+	focus = {
+		id = HUN_liberatebalkans
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_invitecroatiadem
+		}
+		prerequisite = {
+			focus = HUN_inviteromaniadem
+		}
+		prerequisite = {
+			focus = HUN_inviteserbiadem
+		}
+		x = 6
+		y = 6
+
+	}
+	focus = {
+		id = HUN_democracyeasteurope
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_liberatebalkans
+			focus = BUL_alliedresearch
+		}
+		x = 3
+		y = 7
+
+	}
+	focus = {
+		id = HUN_looktowest
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_politicaldirection
+		}
+		mutually_exclusive = {
+			focus = HUN_sovietlegacy
+		}
+		x = 7
+		y = 1
+		completion_reward = {
+			add_political_power = 100
+		}
+
+	}
+	focus = {
+		id = HUN_supportgermany
+		icon = GFX_focus_chi_mission_to_germany
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_looktowest
+		}
+		mutually_exclusive = {
+			focus = HUN_supportdemocracy
+		}
+		x = 11
+		y = 2
+
+	}
+	focus = {
+		id = HUN_fascistgovernment
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_supportgermany
+		}
+		x = 11
+		y = 3
+
+	}
+	focus = {
+		id = HUN_axisresearch
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_fascistgovernment
+		}
+		x = 11
+		y = 4
+
+	}
+	focus = {
+		id = HUN_germanmining
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_axisresearch
+		}
+		x = 11
+		y = 5
+
+	}
+	focus = {
+		id = GER_germantraining
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_germanmining
+		}
+		x = 11
+		y = 6
+
+	}
+	focus = {
+		id = HUN_sovietlegacy
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_politicaldirection
+		}
+		mutually_exclusive = {
+			focus = HUN_looktowest
+		}
+		x = 15
+		y = 1
+
+	}
+	focus = {
+		id = HUN_buildsupport
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_sovietlegacy
+		}
+		x = 15
+		y = 2
+
+	}
+	focus = {
+		id = HUN_socialistcoup
+		icon = GFX_focus_hun_assassinate_horthy
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_buildsupport
+		}
+		x = 15
+		y = 3
+
+	}
+	focus = {
+		id = HUN_joinsoviets
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_socialistcoup
+		}
+		mutually_exclusive = {
+			focus = HUN_ourownfaction
+		}
+		x = 14
+		y = 4
+
+	}
+	focus = {
+		id = HUN_sovietresearch
+		icon = GFX_focus_generic_socialist_science
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_joinsoviets
+		}
+		x = 14
+		y = 5
+
+	}
+	focus = {
+		id = HUN_ourownfaction
+		icon = GFX_focus_yug_pan_slavic_congress
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_socialistcoup
+		}
+		mutually_exclusive = {
+			focus = HUN_joinsoviets
+		}
+		x = 16
+		y = 4
+
+	}
+	focus = {
+		id = HUN_newredarmy
+		icon = GFX_focus_ger_great_red_menace
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_sovietresearch
+			focus = HUN_ourownfaction
+		}
+		x = 15
+		y = 6
+
+	}
+	focus = {
+		id = HUN_castourhand
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_ourownfaction
+		}
+		x = 19
+		y = 5
+
+	}
+	focus = {
+		id = HUN_inviteromania
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_castourhand
+		}
+		x = 17
+		y = 6
+
+	}
+	focus = {
+		id = HUN_inviteyugoslavia
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_castourhand
+		}
+		x = 19
+		y = 6
+
+	}
+	focus = {
+		id = HUN_invitecroatia
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_castourhand
+		}
+		x = 21
+		y = 6
+
+	}
+	focus = {
+		id = HUN_invitebosnia
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_invitecroatia
+		}
+		x = 21
+		y = 7
+
+	}
+	focus = {
+		id = HUN_trianon
+		icon = GFX_focus_renounce_the_treaty_of_triannon
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_bledagreement
+		}
+		x = 25
+		y = 1
+
+	}
+	focus = {
+		id = HUN_demandburgenland
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_trianon
+		}
+		x = 23
+		y = 2
+
+	}
+	focus = {
+		id = HUN_demandmedimurje
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_demandburgenland
+		}
+		x = 23
+		y = 3
+
+	}
+	focus = {
+		id = HUN_demandtransylvania
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_trianon
+		}
+		x = 25
+		y = 2
+
+	}
+	focus = {
+		id = HUN_demandbanat
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_demandtransylvania
+		}
+		x = 25
+		y = 3
+
+	}
+	focus = {
+		id = HUN_demandvojvodina
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_trianon
+		}
+		x = 27
+		y = 2
+
+	}
+	focus = {
+		id = HUN_fateofcroatia
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_demandvojvodina
+		}
+		x = 27
+		y = 3
+
+	}
+	focus = {
+		id = HUN_greater
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_fateofcroatia
+		}
+		prerequisite = {
+			focus = HUN_demandbanat
+		}
+		prerequisite = {
+			focus = HUN_demandmedimurje
+		}
+		x = 25
+		y = 4
+
+	}
+	focus = {
+		id = HUN_anewage
+		icon = GFX_focus_generic_tank_production
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_army
+		}
+		mutually_exclusive = {
+			focus = HUN_lessonsofold
+		}
+		x = 31
+		y = 1
+
+	}
+	focus = {
+		id = HUN_mobilewarfare
+		icon = GFX_focus_generic_combined_arms
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_anewage
+		}
+		x = 30
+		y = 2
+
+	}
+	focus = {
+		id = HUN_hiregermans
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_mobilewarfare
+		}
+		x = 30
+		y = 3
+
+	}
+	focus = {
+		id = HUN_tankresearch
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_anewage
+		}
+		x = 32
+		y = 2
+
+	}
+	focus = {
+		id = HUN_motorized
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_tankresearch
+		}
+		x = 32
+		y = 3
+
+	}
+	focus = {
+		id = HUN_lessonsofold
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_army
+		}
+		mutually_exclusive = {
+			focus = HUN_anewage
+		}
+		x = 35
+		y = 1
+
+	}
+	focus = {
+		id = HUN_grandbattleplan
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_lessonsofold
+		}
+		x = 34
+		y = 2
+
+	}
+	focus = {
+		id = HUN_officeracademies
+		icon = GFX_focus_generic_military_academy
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_grandbattleplan
+		}
+		x = 34
+		y = 3
+
+	}
+	focus = {
+		id = HUN_infantryequ
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_lessonsofold
+		}
+		x = 36
+		y = 2
+
+	}
+	focus = {
+		id = HUN_artillery
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_infantryequ
+		}
+		x = 36
+		y = 3
+
+	}
+	focus = {
+		id = HUN_specialforces
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_hiregermans
+			focus = HUN_motorized
+			focus = HUN_officeracademies
+			focus = HUN_artillery
+		}
+		x = 33
+		y = 4
+
+	}
+	focus = {
+		id = HUN_airdoctrine
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_airforce
+		}
+		x = 41
+		y = 1
+
+	}
+	focus = {
+		id = HUN_fighters
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_airdoctrine
+		}
+		x = 39
+		y = 2
+
+	}
+	focus = {
+		id = HUN_cas
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_airdoctrine
+		}
+		x = 41
+		y = 2
+
+	}
+	focus = {
+		id = HUN_bombers
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_airdoctrine
+		}
+		x = 43
+		y = 2
+
+	}
+	focus = {
+		id = HUN_navaldoctrine
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_navy
+		}
+		x = 48
+		y = 1
+
+	}
+	focus = {
+		id = HUN_cruiserresearch
+		icon = GFX_focus_generic_cruiser2
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_navaldoctrine
+		}
+		x = 47
+		y = 2
+
+	}
+	focus = {
+		id = HUN_destroyers
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_navaldoctrine
+		}
+		x = 49
+		y = 2
+
+	}
+	focus = {
+		id = HUN_navalbonus
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_cruiserresearch
+		}
+		prerequisite = {
+			focus = HUN_destroyers
+		}
+		x = 48
+		y = 3
+
+	}
+	focus = {
+		id = HUN_revolutionthrougharms
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_invitebosnia
+		}
+		prerequisite = {
+			focus = HUN_inviteyugoslavia
+		}
+		prerequisite = {
+			focus = HUN_inviteromania
+		}
+		x = 19
+		y = 8
+
+	}
+	focus = {
+		id = HUN_newarmy
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = HUN_specialforces
+		}
+		x = 33
+		y = 5
+
+	}
+}
