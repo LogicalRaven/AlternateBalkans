@@ -1,0 +1,15 @@
+﻿ideas = {
+	political_advisor = {
+		
+		HUN_jozsef_szell = {
+			picture = generic_democratic_europe
+			allowed = {
+				original_tag = HUN
+			}
+			available = {
+				has_completed_focus = HUN_supportdemocracy
+			}
+			traits = { democratic_reformer }
+		}
+	}
+}
