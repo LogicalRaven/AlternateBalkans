@@ -1,0 +1,1584 @@
+###########################
+# Croatian Events
+###########################
+add_namespace = croatia_ab
+
+#Veza
+country_event = {
+	id = croatia_ab.1
+	title = croatia_ab.1.t
+	desc = croatia_ab.1.d
+	#picture = GFX_
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.1.a
+		ai_chance = { 
+			base = 30
+			modifier = {
+				add = -25
+				CRO = { has_army_size = { size < 10 } }
+			}
+			modifier = {
+				add = 100
+				CRO = { has_army_size = { size > 9 } }
+			}
+			modifier = {
+				add = 30
+				is_in_faction_with = CRO
+			}
+			modifier = {
+				add = 50
+				SLV = {
+					has_government = fascism
+				}
+			}
+		}
+		CRO = {
+			country_event = { hours = 2 id = croatia_ab.23 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = {
+		name = croatia_ab.1.b
+		ai_chance = { 
+			base = 5
+			modifier = {
+				add = 3
+				is_in_faction = yes
+				NOT = { is_in_faction_with = CRO }
+			}
+			modifier = {
+				add = 5
+				any_other_country = {
+					has_guaranteed = SLV
+				}
+			}
+		}
+		CRO = {
+			add_opinion_modifier = { target = SLV modifier = veza_rejected }
+			country_event = { hours = 2 id = croatia_ab.24 }
+			if = { limit = { is_in_faction_with = SLV }
+				remove_from_faction = SLV
+			}
+		}
+	}
+}
+
+#Slovenia accepts Veza
+country_event = {
+	id = croatia_ab.23
+	title = croatia_ab.23.t
+	desc = croatia_ab.23.d
+	#picture = GFX_
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.23.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			annex_country = {
+				target = SLV
+				transfer_troops = yes
+			}
+		}
+	}
+}
+
+#Slovenia refuses Veza
+country_event = {
+	id = croatia_ab.24
+	title = croatia_ab.24.t
+	desc = croatia_ab.24.d
+	#picture = GFX_
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.24.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			create_wargoal = {
+				type = annex_everything
+				target = SLV
+			}
+		}
+	}
+}
+
+#Croatia demands Banat
+country_event = {
+	id = croatia_ab.2
+	title = croatia_ab.2.t
+	desc = croatia_ab.2.d
+	#picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = croatia_ab.2.a
+		ai_chance = { 
+			base = 30
+			modifier = {
+				add = -20
+				CRO = { has_army_size = { size < 11 } }
+			}
+			modifier = {
+				add = 100
+				CRO = { has_army_size = { size > 10 } }
+			}
+			modifier = {
+				add = 30
+				is_in_faction_with = CRO
+			}
+			modifier = {
+				add = 50
+				SER = {
+					has_government = fascism
+				}
+			}
+		}
+		CRO = {
+			country_event = { hours = 2 id = croatia_ab.25 }
+		}
+		SER = { 
+			add_opinion_modifier = { target = CRO modifier = banat_demanded } 
+		}
+	}
+	option = {
+		name = croatia_ab.2.b
+		ai_chance = { 
+			base = 4
+			modifier = {
+				add = 3
+				is_in_faction = yes
+				NOT = { is_in_faction_with = CRO }
+			}
+			modifier = {
+				add = 5
+				any_other_country = {
+					has_guaranteed = SER
+				}
+			}
+		}
+		CRO = {
+			add_opinion_modifier = { target = SER modifier = banat_rejected }
+			country_event = { hours = 2 id = croatia_ab.26 }
+			if = { limit = { is_in_faction_with = SER }
+				remove_from_faction = SER
+			}
+		}
+		SER = { 
+			add_opinion_modifier = { target = CRO modifier = banat_demanded } 
+		}
+	}
+}
+
+#Serbia accepts Banat
+country_event = {
+	id = croatia_ab.25
+	title = croatia_ab.25.t
+	desc = croatia_ab.25.d
+	#picture = GFX_
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.25.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			transfer_state = 775
+		}
+	}
+}
+
+#Serbia rejects Banat
+country_event = {
+	id = croatia_ab.26
+	title = croatia_ab.26.t
+	desc = croatia_ab.26.d
+	#picture = GFX_
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.26.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			create_wargoal = {
+				type = take_state_focus
+				target = SER
+				generator = { 775 }
+			}
+		}
+	}
+}
+
+#Croatia Recognizes Soviet Union
+news_event = {
+	id = croatia_ab.4
+	title = croatia_ab.4.t
+	desc = croatia_ab.4.d
+	#picture = GFX_
+	major = yes
+	fire_only_once = yes
+	
+	option = {
+		name = croatia_ab.4.a
+	}
+}
+
+#Demanding Bosnian Integration
+country_event = {
+	id = croatia_ab.5
+	title = croatia_ab.5.t
+	desc = croatia_ab.5.d
+	#picture = GFX_
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.5.a
+		ai_chance = { 
+			base = 30
+			modifier = {
+				add = -25
+				CRO = { has_army_size = { size < 12 } }
+			}
+			modifier = {
+				add = 100
+				CRO = { has_army_size = { size > 11 } }
+			}
+			modifier = {
+				add = 30
+				is_in_faction_with = CRO
+			}
+			modifier = {
+				add = 50
+				BOS = {
+					has_government = communism
+				}
+			}
+		}
+		CRO = {
+			country_event = { hours = 2 id = croatia_ab.27 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = {
+		name = croatia_ab.5.b
+		ai_chance = { 
+			base = 10
+			modifier = {
+				add = 3
+				is_in_faction = yes
+				NOT = { is_in_faction_with = CRO }
+			}
+			modifier = {
+				add = 5
+				any_other_country = {
+					has_guaranteed = BOS
+				}
+			}
+		}
+		CRO = {
+			country_event = { hours = 2 id = croatia_ab.28 }
+			if = { limit = { is_in_faction_with = BOS }
+				remove_from_faction = BOS
+			}
+		}
+	}
+}
+
+#Bosnia accepts
+country_event = {
+	id = croatia_ab.27
+	title = croatia_ab.27.t
+	desc = croatia_ab.27.d
+	#picture = GFX_
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.27.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			annex_country = {
+				target = BOS
+				transfer_troops = yes
+			}
+		}
+	}
+}
+
+#Bosnia refuses
+country_event = {
+	id = croatia_ab.28
+	title = croatia_ab.28.t
+	desc = croatia_ab.28.d
+	#picture = GFX_
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.28.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			create_wargoal = {
+				type = annex_everything
+				target = BOS
+			}
+		}
+	}
+}
+
+#Slovenian-Croatian Agreement
+country_event = {
+	id = croatia_ab.6
+	title = croatia_ab.6.t
+	desc = croatia_ab.6.d
+	#picture = GFX_
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.6.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			add_opinion_modifier = {
+				target = SLV
+				modifier = slvcro_agreement
+			}
+		}
+		SLV = {
+			add_opinion_modifier = {
+				target = CRO
+				modifier = slvcro_agreement
+			}
+		}
+	}
+}
+
+#Slovenia-Croatia: Merge Our Politics
+country_event = {
+	id = croatia_ab.7
+	title = croatia_ab.7.t
+	desc = croatia_ab.7.d
+	#picture = GFX_
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.7.a
+		ai_chance = { 
+			base = 30
+			modifier = {
+				add = 10
+				has_opinion = {
+					tag = CRO
+					value = 100
+				}
+			}
+			modifier = {
+				add = 30
+				SLV = {
+					has_opinion_modifier = slvcro_agreement
+				}
+			}
+			modifier = {
+				add = 30
+				is_in_faction_with = CRO
+			}
+		}
+		CRO = {
+			country_event = { hours = 2 id = croatia_ab.29 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = {
+		name = croatia_ab.7.b
+		ai_chance = { base = 5 }
+		CRO = {
+			country_event = { hours = 2 id = croatia_ab.30 }
+		}
+	}
+}
+
+#Slovenia Agrees to Unification
+country_event = {
+	id = croatia_ab.29
+	title = croatia_ab.29.t
+	desc = croatia_ab.29.d
+	#picture = GFX_
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.29.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			annex_country = {
+				target = SLV
+				transfer_troops = yes
+			}
+		}
+	}
+}
+
+#Slovenia Rejects Unification
+country_event = {
+	id = croatia_ab.30
+	title = croatia_ab.30.t
+	desc = croatia_ab.30.d
+	#picture = GFX_
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.30.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			add_opinion_modifier = {
+				target = SLV
+				modifier = unification_traitors
+			}
+		}
+	}
+}
+
+#First Illyrian Agreement
+country_event = {
+	id = croatia_ab.8
+	title = croatia_ab.8.t
+	desc = croatia_ab.8.d
+	#picture = GFX_
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.8.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			transfer_state = 768
+			add_opinion_modifier = {
+				target = BOS
+				modifier = illyrian_agreement
+			}
+		}
+		BOS = {
+			remove_state_core = 768
+			remove_state_claim = 768
+			add_opinion_modifier = {
+				target = CRO
+				modifier = illyrian_agreement
+			}
+		}
+	}
+}
+
+#Second Illyrian Agreement
+country_event = {
+	id = croatia_ab.9
+	title = croatia_ab.9.t
+	desc = croatia_ab.9.d
+	#picture = GFX_
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.9.a
+		ai_chance = { 
+			base = 30
+			modifier = {
+				add = 10
+				has_opinion = {
+					tag = CRO
+					value = 100
+				}
+			}
+			modifier = {
+				add = 30
+				BOS = {
+					has_opinion_modifier = illyrian_agreement
+				}
+			}
+			modifier = {
+				add = 30
+				is_in_faction_with = CRO
+			}
+		}
+		CRO = {
+			country_event = { hours = 2 id = croatia_ab.31 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = {
+		name = croatia_ab.9.b
+		ai_chance = { base = 3 }
+		CRO = {
+			country_event = { hours = 2 id = croatia_ab.32 }
+		}
+	}
+}
+
+#Bosnia Agrees to Unification
+country_event = {
+	id = croatia_ab.31
+	title = croatia_ab.31.t
+	desc = croatia_ab.31.d
+	#picture = GFX_
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.31.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			annex_country = {
+				target = BOS
+				transfer_troops = yes
+			}
+		}
+	}
+}
+
+#Bosnia Rejects Unification
+country_event = {
+	id = croatia_ab.32
+	title = croatia_ab.32.t
+	desc = croatia_ab.32.d
+	#picture = GFX_
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.32.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			add_state_claim = 104
+			add_opinion_modifier = {
+				target = BOS
+				modifier = unification_traitors
+			}
+		}
+	}
+}
+
+#Illyria wants to cede Mali i Zi
+country_event = {
+	id = croatia_ab.10
+	title = croatia_ab.10.t
+	desc = croatia_ab.10.d
+	#picture = GFX_
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.10.a
+		ai_chance = { 
+			base = 30
+			modifier = {
+				add = 20
+				has_opinion = {
+					tag = CRO
+					value = 80
+				}
+			}
+			modifier = {
+				add = 30
+				is_in_faction_with = CRO
+			}
+		}
+		CRO = {
+			country_event = { hours = 2 id = croatia_ab.33 }
+		}
+	}
+	option = {
+		name = croatia_ab.10.b
+		ai_chance = { base = 5 }
+		CRO = {
+			country_event = { hours = 2 id = croatia_ab.34 }
+		}
+	}
+}
+
+#Albania Agrees
+country_event = {
+	id = croatia_ab.33
+	title = croatia_ab.33.t
+	desc = croatia_ab.33.d
+	#picture = GFX_
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.33.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			transfer_state = 105
+		}
+		ALB = {
+			remove_state_core = 105
+			remove_state_claim = 105
+		}
+	}
+}
+
+#Albania Refuses
+country_event = {
+	id = croatia_ab.34
+	title = croatia_ab.34.t
+	desc = croatia_ab.34.d
+	#picture = GFX_
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.34.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			add_state_claim = 105
+			add_opinion_modifier = {
+				target = ALB
+				modifier = refused_ultimatum
+			}
+		}
+	}
+}
+
+#Partition of Serbia: Proposal to Romania
+country_event = {
+	id = croatia_ab.11
+	title = croatia_ab.11.t
+	desc = croatia_ab.11.d
+	#picture = GFX_
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {		#Romania Accepts
+		name = croatia_ab.11.a
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = -30
+				ROM = {
+					has_opinion = {
+						tag = CRO
+						value < 0
+					}
+				}
+			}
+			modifier = {
+				add = -30
+				CRO = {
+					has_opinion = {
+						tag = ROM
+						value < 0
+					}
+				}
+			}
+			modifier = {
+				add = 20
+				ROM = {
+					has_opinion = {
+						tag = CRO
+						value > 80
+					}
+				}
+			}
+			modifier = {
+				add = 10
+				CRO = {
+					has_opinion = {
+						tag = ROM
+						value > 80
+					}
+				}
+			}
+		}
+		CRO = {
+			country_event = { hours = 2 id = croatia_ab.35 }
+		}
+		SER = {
+			country_event = { hours = 12 id = croatia_ab.37 }
+		}
+	}
+	option = {		#Romania Refuses
+		name = croatia_ab.11.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = -10
+				ROM = {
+					has_opinion = {
+						tag = CRO
+						value > 80
+					}
+				}
+			}
+			modifier = {
+				add = -10
+				CRO = {
+					has_opinion = {
+						tag = ROM
+						value > 80
+					}
+				}
+			}
+			modifier = {
+				add = 30
+				ROM = {
+					has_opinion = {
+						tag = CRO
+						value < 0
+					}
+				}
+			}
+			modifier = {
+				add = 30
+				CRO = {
+					has_opinion = {
+						tag = ROM
+						value < 0
+					}
+				}
+			}
+		}
+		CRO = {
+			country_event = { hours = 2 id = croatia_ab.36 }
+		}
+		SER = {
+			country_event = { hours = 12 id = croatia_ab.38 }
+		}
+	}
+}
+
+#Partition of Serbia: Croatia gets message about accepted partition
+country_event = {
+	id = croatia_ab.35
+	title = croatia_ab.35.t
+	desc = croatia_ab.35.d
+	#picture = GFX_
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = croatia_ab.35.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			add_political_power = 25
+		}
+	}
+}
+
+#Partition of Serbia: Ultimatum to Serbia /w Romania
+country_event = {
+	id = croatia_ab.37
+	title = croatia_ab.37.t
+	desc = croatia_ab.37.d
+	#picture = GFX_
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {		#Accept
+		name = croatia_ab.37.a
+		ai_chance = { 
+			base = 20
+			modifier = {
+				add = -10
+				CRO = { has_army_size = { size < 20 } }
+			}
+			modifier = {
+				add = 20
+				CRO = { has_army_size = { size > 19 } }
+			}
+			modifier = {
+				add = -10
+				ROM = { has_army_size = { size < 17 } }
+			}
+			modifier = {
+				add = 15
+				ROM = { has_army_size = { size > 16 } }
+			}
+			modifier = {
+				add = -20
+				SER = { has_army_size = { size > 19 } }
+			}
+			modifier = {
+				add = 10
+				SER = { has_army_size = { size < 20 } }
+			}
+		}
+		CRO = {
+			transfer_state = 107
+			transfer_state = 108
+			transfer_state = 775
+			country_event = { hours = 2 id = croatia_ab.39 }
+		}
+		ROM = {
+			transfer_state = 82
+			country_event = { hours = 2 id = croatia_ab.39 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = {		#Refuse
+		name = croatia_ab.37.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 20
+				CRO = { has_army_size = { size < 20 } }
+			}
+			modifier = {
+				add = -10
+				CRO = { has_army_size = { size > 19 } }
+			}
+			modifier = {
+				add = 15
+				ROM = { has_army_size = { size < 17 } }
+			}
+			modifier = {
+				add = -10
+				ROM = { has_army_size = { size > 16 } }
+			}
+			modifier = {
+				add = 10
+				SER = { has_army_size = { size > 19 } }
+			}
+			modifier = {
+				add = -20
+				SER = { has_army_size = { size < 20 } }
+			}
+		}
+		CRO = {
+			declare_war_on = {
+				target = SER
+				type = annex_everything
+			}
+			country_event = { hours = 2 id = croatia_ab.40 }
+		}
+		ROM = {
+			declare_war_on = {
+				target = SER
+				type = annex_everything
+			}
+			country_event = { hours = 2 id = croatia_ab.40 }
+		}
+	}
+}
+
+#Partition of Serbia: Croatia gets message about refused partition
+country_event = {
+	id = croatia_ab.36
+	title = croatia_ab.36.t
+	desc = croatia_ab.36.d
+	#picture = GFX_
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = croatia_ab.36.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			add_political_power = -25
+		}
+	}
+}
+
+#Partition of Serbia: Ultimatum to Serbia /alone
+country_event = {
+	id = croatia_ab.38
+	title = croatia_ab.38.t
+	desc = croatia_ab.38.d
+	#picture = GFX_
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {		#Accept
+		name = croatia_ab.38.a
+		ai_chance = { 
+			base = 10
+			modifier = {
+				add = -10
+				CRO = { has_army_size = { size < 20 } }
+			}
+			modifier = {
+				add = 20
+				CRO = { has_army_size = { size > 19 } }
+			}
+			modifier = {
+				add = -20
+				SER = { has_army_size = { size > 19 } }
+			}
+			modifier = {
+				add = 10
+				SER = { has_army_size = { size < 20 } }
+			}
+		}
+		CRO = {
+			annex_country = {
+				target = SER
+				transfer_troops = yes
+			}
+			country_event = { hours = 2 id = croatia_ab.41 }
+		}
+	}
+	option = {		#Refuse
+		name = croatia_ab.38.b
+		ai_chance = { 
+			base = 10
+			modifier = {
+				add = 20
+				CRO = { has_army_size = { size < 20 } }
+			}
+			modifier = {
+				add = -10
+				CRO = { has_army_size = { size > 19 } }
+			}
+			modifier = {
+				add = 10
+				SER = { has_army_size = { size > 19 } }
+			}
+			modifier = {
+				add = -20
+				SER = { has_army_size = { size < 20 } }
+			}
+		}
+		CRO = {
+			create_wargoal = {
+				type = annex_everything
+				target = SER
+			}
+			country_event = { hours = 2 id = croatia_ab.42 }
+		}
+	}
+}
+
+#Partition of Serbia: Ultimatum Accepted /w Romania
+country_event = {
+	id = croatia_ab.39
+	title = croatia_ab.39.t
+	desc = croatia_ab.39.d
+	#picture = GFX_
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = croatia_ab.39.a
+		ai_chance = { factor = 100 }
+		add_named_threat = {
+			threat = 10
+			name = partition_of_serbia
+		}
+		CRO = {
+			add_political_power = -25
+		}
+		ROM = {
+			add_political_power = -25
+		}
+	}
+}
+
+#Partition of Serbia: Ultimatum Refused /w Romania
+country_event = {
+	id = croatia_ab.40
+	title = croatia_ab.40.t
+	desc = croatia_ab.40.d
+	#picture = GFX_
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = croatia_ab.40.a
+		ai_chance = { factor = 100 }
+		add_named_threat = {
+			threat = 10
+			name = partition_of_serbia
+		}
+		CRO = {
+			add_political_power = -25
+		}
+		ROM = {
+			add_political_power = -25
+		}
+	}
+}
+
+#Partition of Serbia: Ultimatum Accepted /alone
+country_event = {
+	id = croatia_ab.41
+	title = croatia_ab.41.t
+	desc = croatia_ab.41.d
+	#picture = GFX_
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = croatia_ab.41.a
+		ai_chance = { factor = 100 }
+		add_named_threat = {
+			threat = 10
+			name = serbia_annexation
+		}
+		CRO = {
+			add_political_power = -25
+		}
+	}
+}
+
+#Partition of Serbia: Ultimatum Refused /alone
+country_event = {
+	id = croatia_ab.42
+	title = croatia_ab.42.t
+	desc = croatia_ab.42.d
+	#picture = GFX_
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = croatia_ab.42.a
+		ai_chance = { factor = 100 }
+		add_named_threat = {
+			threat = 10
+			name = serbia_annexation
+		}
+		CRO = {
+			add_political_power = -25
+		}
+	}
+}
+
+#Bulgarian Question
+country_event = {
+	id = croatia_ab.12
+	title = croatia_ab.12.t
+	desc = croatia_ab.12.d
+	#picture = GFX_
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = croatia_ab.12.a
+		ai_chance = {
+			base = 20
+		}
+
+		CRO = {
+			transfer_state = 106
+			country_event = { hours = 2 id = croatia_ab.43 }
+		}
+		ROM = {
+			transfer_state = 46
+			transfer_state = 81
+			country_event = { hours = 2 id = croatia_ab.43 }
+		}
+		106 = {
+			remove_core_of = BUL
+			remove_claim_by = BUL
+		}
+		46 = {
+			remove_core_of = BUL
+			remove_claim_by = BUL
+		}
+		81 = {
+			remove_core_of = BUL
+			remove_claim_by = BUL
+		}
+		BUL = {
+			add_opinion_modifier = {
+				target = CRO
+				modifier = nationalistic_act
+			}
+			add_opinion_modifier = {
+				target = ROM
+				modifier = nationalistic_act
+			}
+		}
+	}
+	option = {
+		name = croatia_ab.12.b
+		ai_chance = {
+			base = 10
+		}
+
+		CRO = {
+			add_opinion_modifier = {
+				target = BUL
+				modifier = nationalistic_act
+			}
+			country_event = { hours = 2 id = croatia_ab.44 }
+		}
+		ROM = {
+			add_opinion_modifier = {
+				target = BUL
+				modifier = nationalistic_act
+			}
+			country_event = { hours = 2 id = croatia_ab.44 }
+		}
+		106 = {
+			set_demilitarized_zone = yes
+		}
+		46 = {
+			set_demilitarized_zone = yes
+		}
+		81 = {
+			set_demilitarized_zone = yes
+		}
+		BUL = {
+			add_political_power = -75
+		}
+	}
+}
+
+#Bulgaria Accepts
+country_event = {
+	id = croatia_ab.43
+	title = croatia_ab.43.t
+	desc = croatia_ab.43.d
+	#picture = GFX_
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = croatia_ab.43.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			add_political_power = 25
+		}
+		ROM = {
+			add_political_power = 25
+		}
+	}
+}
+
+#Bulgaria Refuses
+country_event = {
+	id = croatia_ab.44
+	title = croatia_ab.44.t
+	desc = croatia_ab.44.d
+	#picture = GFX_
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = croatia_ab.44.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			add_political_power = -25
+		}
+		ROM = {
+			add_political_power = -25
+		}
+	}
+}
+
+#Croatia Demands Macedonia
+country_event = {
+	id = croatia_ab.13
+	title = croatia_ab.13.t
+	desc = croatia_ab.13.d
+	#picture = GFX_
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = croatia_ab.13.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = -10
+				CRO = { has_army_size = { size < 25 } }
+			}
+			modifier = {
+				add = 20
+				CRO = { has_army_size = { size > 24 } }
+			}
+			modifier = {
+				add = -10
+				BUL = { has_army_size = { size > 24 } }
+			}
+			modifier = {
+				add = 20
+				BUL = { has_army_size = { size < 25 } }
+			}
+		}
+		CRO = {
+			transfer_state = 106
+			country_event = { hours = 2 id = croatia_ab.45 }
+		}
+	}
+	option = {
+		name = croatia_ab.13.b
+		ai_chance = {
+			base = 5
+			modifier = {
+				add = 20
+				CRO = { has_army_size = { size < 25 } }
+			}
+			modifier = {
+				add = -10
+				CRO = { has_army_size = { size > 24 } }
+			}
+			modifier = {
+				add = 20
+				BUL = { has_army_size = { size > 24 } }
+			}
+			modifier = {
+				add = -10
+				BUL = { has_army_size = { size < 25 } }
+			}
+		}
+		CRO = {
+			add_opinion_modifier = {
+				target = BUL
+				modifier = nationalistic_act
+			}
+			country_event = { hours = 2 id = croatia_ab.46 }
+		}
+		BUL = {
+			add_opinion_modifier = {
+				target = CRO
+				modifier = nationalistic_act
+			}
+		}
+	}
+}
+
+#Bulgaria Accepts Macedonia Demand
+country_event = {
+	id = croatia_ab.45
+	title = croatia_ab.45.t
+	desc = croatia_ab.45.d
+	#picture = GFX_
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = croatia_ab.45.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			add_threat = 3
+		}
+	}
+}
+
+#Bulgaria Refuses Macedonia Demand
+country_event = {
+	id = croatia_ab.46
+	title = croatia_ab.46.t
+	desc = croatia_ab.46.d
+	#picture = GFX_
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = croatia_ab.46.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			add_political_power = -25
+		}
+	}
+}
+
+#Croatia wants to Puppet Albania
+country_event = {
+	id = croatia_ab.14
+	title = croatia_ab.14.t
+	desc = croatia_ab.14.d
+	#picture = GFX_
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.14.a
+		ai_chance = { 
+			base = 30
+			modifier = {
+				add = -20
+				CRO = { has_army_size = { size < 25 } }
+			}
+			modifier = {
+				add = 10
+				CRO = { has_army_size = { size > 24 } }
+			}
+			modifier = {
+				add = -20
+				ALB = { has_army_size = { size > 12 } }
+			}
+			modifier = {
+				add = 10
+				ALB = { has_army_size = { size < 13 } }
+			}
+			modifier = {
+				add = 50
+				SLV = {
+					has_government = fascism
+				}
+			}
+		}
+		CRO = {
+			country_event = { hours = 2 id = croatia_ab.47 }
+		}
+	}
+	option = {
+		name = croatia_ab.14.b
+		ai_chance = { 
+			base = 10
+			modifier = {
+				add = 3
+				is_in_faction = yes
+				NOT = { is_in_faction_with = CRO }
+			}
+			modifier = {
+				add = 5
+				any_other_country = {
+					has_guaranteed = ALB
+				}
+			}
+			modifier = {
+				add = 10
+				CRO = { has_army_size = { size < 25 } }
+			}
+			modifier = {
+				add = -20
+				CRO = { has_army_size = { size > 24 } }
+			}
+			modifier = {
+				add = 10
+				ALB = { has_army_size = { size > 12 } }
+			}
+			modifier = {
+				add = -20
+				ALB = { has_army_size = { size < 13 } }
+			}
+			modifier = {
+				add = 50
+				SLV = {
+					NOT = {
+						has_government = fascism
+					}
+				}
+			}
+		}
+		CRO = {
+			country_event = { hours = 2 id = croatia_ab.48 }
+		}
+	}
+}
+
+#Albania Accepts
+country_event = {
+	id = croatia_ab.47
+	title = croatia_ab.47.t
+	desc = croatia_ab.47.d
+	#picture = GFX_
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.47.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			puppet = ALB
+		}
+	}
+}
+
+#Albania Refuses
+country_event = {
+	id = croatia_ab.48
+	title = croatia_ab.48.t
+	desc = croatia_ab.48.d
+	#picture = GFX_
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.48.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ALB
+			}
+		}
+	}
+}
+
+#Invite Tito Over
+country_event = {
+	id = croatia_ab.15
+	title = croatia_ab.15.t
+	desc = croatia_ab.15.d
+	#picture = GFX_
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = croatia_ab.15.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			create_country_leader = { name = "Josip Broz Tito" desc = "POLITICS_TITO" picture = "" expire = "1965.1.1" ideology = stalinism traits = { } }
+		}
+	}
+}
+
+#Pro-Soviet Government in Illyria
+country_event = {
+	id = croatia_ab.16
+	title = croatia_ab.16.t
+	desc = croatia_ab.16.d
+	#picture = GFX_
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = croatia_ab.16.a
+		ai_chance = { factor = 60 }
+		CRO = {
+			create_country_leader = { name = "Vyacheslav Molotov" desc = "POLITICS_MOLOTOV" picture = "" expire = "1965.1.1" ideology = stalinism traits = { } }
+		}
+	}
+	option = {
+		name = croatia_ab.16.b
+		ai_chance = { factor = 30 }
+		CRO = {
+			create_country_leader = { name = "Kliment Voroshilov" desc = "POLITICS_VOROSHILOV" picture = "" expire = "1965.1.1" ideology = stalinism traits = { } }
+		}
+	}
+	option = {
+		name = croatia_ab.16.c
+		ai_chance = { factor = 10 }
+		CRO = {
+			create_country_leader = { name = "Nikita Khrushchev" desc = "POLITICS_KHRUSHCHEV" picture = "" expire = "1965.1.1" ideology = stalinism traits = { } }
+		}
+	}
+}
+
+#Proclaiming Greater Croatia
+country_event = {
+	id = croatia_ab.18
+	title = croatia_ab.18.t
+	desc = croatia_ab.18.d
+	#picture = GFX_
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.18.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			set_cosmetic_tag = GCR
+		}
+	}
+}
+
+#Proclaiming Soviet Republic of Croats
+country_event = {
+	id = croatia_ab.19
+	title = croatia_ab.19.t
+	desc = croatia_ab.19.d
+	#picture = GFX_
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.19.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			set_cosmetic_tag = SRC
+		}
+	}
+}
+
+#Proclaiming Croatia-Slovenia
+country_event = {
+	id = croatia_ab.20
+	title = croatia_ab.20.t
+	desc = croatia_ab.20.d
+	#picture = GFX_
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.20.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			set_cosmetic_tag = CSV
+		}
+	}
+}
+
+#Proclaiming Illyria
+country_event = {
+	id = croatia_ab.21
+	title = croatia_ab.21.t
+	desc = croatia_ab.21.d
+	#picture = GFX_
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.21.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			set_cosmetic_tag = ILL
+		}
+	}
+}
+
+#Proclaiming Yugoslavia
+country_event = {
+	id = croatia_ab.22
+	title = croatia_ab.22.t
+	desc = croatia_ab.22.d
+	#picture = GFX_
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = croatia_ab.22.a
+		ai_chance = { factor = 100 }
+		CRO = {
+			set_cosmetic_tag = JUG
+		}
+	}
+}

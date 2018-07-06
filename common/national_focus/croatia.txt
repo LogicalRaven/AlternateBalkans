@@ -1,0 +1,3724 @@
+focus_tree = {
+	id = croatian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = CRO
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1500 }
+
+	#FOCUS TREE
+	#Croatian Legacy
+	focus = {
+		id = CRO_croatian_legacy
+		#icon = GFX_
+		mutually_exclusive = { focus = CRO_unite_the_balkans }
+		x = 7
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	#Unite the Balkans
+	focus = {
+		id = CRO_unite_the_balkans
+		#icon = GFX_
+		mutually_exclusive = { focus = CRO_croatian_legacy }
+		x = 20
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 100
+		}
+	}
+
+	#Keep Nationalist Movements
+	focus = {
+		id = CRO_keep_nationalist_movements
+		#icon = GFX_
+		prerequisite = { focus = CRO_croatian_legacy }
+		mutually_exclusive = { focus = CRO_find_royal_family }
+		mutually_exclusive = { focus = CRO_western_appearance }
+		mutually_exclusive = { focus = CRO_recognize_soviet_union }
+		x = 1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_popularity {
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+	}
+
+	#Popularize Fascist Government
+	focus = {
+		id = CRO_popularize_fascist_government
+		#icon = GFX_
+		prerequisite = { focus = CRO_keep_nationalist_movements }
+		x = 0
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_popularity {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_threat = 1
+		}
+	}
+
+	#Expand Civil Support
+	focus = {
+		id = CRO_expand_civil_support
+		#icon = GFX_
+		prerequisite = { focus = CRO_keep_nationalist_movements }
+		x = 2
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_ideas {
+				generic_fascist_demagogue
+			}
+		}
+	}
+
+	#Strengthen Public Opinion
+	focus = {
+		id = CRO_strengthen_public_opinion
+		#icon = GFX_
+		prerequisite = { focus = CRO_popularize_fascist_government focus = CRO_expand_civil_support }
+		x = 2
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_popularity {
+				ideology = democratic
+				popularity = -0.1
+			}
+		}
+	}
+
+	#Fascist Government
+	focus = {
+		id = CRO_fascist_government
+		#icon = GFX_
+		prerequisite = { focus = CRO_popularize_fascist_government }
+		prerequisite = { focus = CRO_expand_civil_support }
+		prerequisite = { focus = CRO_strengthen_public_opinion }
+		x = 1
+		y = 4
+
+		cost = 10
+
+		available = {
+			CRO {
+				fascism > 0.6
+			}
+		}
+		
+		bypass = {
+			has_government = fascism
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			set_politics {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+		}
+	}
+
+	#Veza
+	focus = {
+		id = CRO_veza
+		#icon = GFX_
+		prerequisite = { focus = CRO_fascist_government }
+		x = 0
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_named_threat = {
+				threat = 5
+				name = CRO_veza
+			}
+			SLV = {
+					country_event = croatia_ab.1
+				}
+		}
+	}
+
+	#Demand Banat
+	focus = {
+		id = CRO_demand_banat
+		#icon = GFX_
+		prerequisite = { focus = CRO_fascist_government }
+		x = 2
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_named_threat = {
+				threat = 1
+				name = CRO_banat
+			}
+			SER = {
+				country_event = croatia_ab.2
+			}
+		}
+	}
+
+	#Return Trieste
+	focus = {
+		id = CRO_return_trieste
+		#icon = GFX_
+		prerequisite = { focus = CRO_veza }
+		x = 0
+		y = 6
+
+		cost = 10
+
+		available = {
+			CRO = {
+				owns_state = 777
+				controls_state = 777
+			}
+		}
+
+		bypass = {
+			ITA = {
+				owns_state = 777
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			777 = { set_state_name = "Trieste" }
+			ITA = {
+				transfer_state = 777
+			}
+			SLV = {
+				remove_state_core = 777
+			}
+		}
+	}
+
+	#Sign Salzburg Treaty
+	focus = {
+		id = CRO_sign_salzburg_treaty
+		#icon = GFX_
+		prerequisite = { focus = CRO_demand_banat }
+		x = 2
+		y = 6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			GER = {
+				country_event = generic.2
+			}
+		}
+	}
+
+	#Announce Stability
+	focus = {
+		id = CRO_announce_stability
+		#icon = GFX_
+		prerequisite = { focus = CRO_return_trieste }
+		prerequisite = { focus = CRO_sign_salzburg_treaty }
+		x = 1
+		y = 7
+
+		cost = 10
+
+		available = {
+			CRO = {
+				owns_state = 770
+				controls_state = 770
+				owns_state = 102
+				controls_state = 102
+				owns_state = 773
+				controls_state = 773
+				owns_state = 775
+				controls_state = 775
+			}
+		}
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_stability = 0.15
+			add_political_power = 200
+			set_rule = {
+				can_create_factions = yes
+				can_send_volunteers = yes
+			}
+		}
+	}
+
+	#Nationalize Slovenia
+	focus = {
+		id = CRO_nationalize_slovenia
+		#icon = GFX_
+		prerequisite = { focus = CRO_announce_stability }
+		x = 0
+		y = 8
+
+		cost = 15
+
+		available = {
+			CRO = {
+				owns_state = 770
+				controls_state = 770
+				owns_state = 102
+				controls_state = 102
+				owns_state = 773
+				controls_state = 773
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			770 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			102 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			773 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Nationalize Banat
+	focus = {
+		id = CRO_nationalize_banat
+		#icon = GFX_
+		prerequisite = { focus = CRO_announce_stability }
+		x = 2
+		y = 8
+
+		cost = 15
+
+		available = {
+			CRO = {
+				owns_state = 775
+				controls_state = 775
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			775 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Proclaim Greater Croatia
+	focus = {
+		id = CRO_proclaim_greater_croatia
+		#icon = GFX_
+		prerequisite = { focus = CRO_nationalize_banat }
+		prerequisite = { focus = CRO_nationalize_slovenia }
+		x = 1
+		y = 9
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			country_event = croatia_ab.18
+		}
+	}
+
+	#Find the Royal Family
+	focus = {
+		id = CRO_find_royal_family
+		#icon = GFX_
+		prerequisite = { focus = CRO_croatian_legacy }
+		mutually_exclusive = { focus = CRO_keep_nationalist_movements }
+		mutually_exclusive = { focus = CRO_western_appearance }
+		mutually_exclusive = { focus = CRO_recognize_soviet_union }
+		x = 5
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_popularity {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_popularity {
+				ideology = monarchism
+				popularity = 0.05
+			}
+		}
+	}
+
+	#Subordinate the Monarch
+	focus = {
+		id = CRO_subordinate_monarch
+		#icon = GFX_
+		prerequisite = { focus = CRO_find_royal_family }
+		mutually_exclusive = { focus = CRO_let_monarch_rule }
+		x = 4
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_popularity {
+				ideology = neutrality
+				popularity = 0.1
+			}
+			add_political_power = 75
+		}
+	}
+
+	#Local Parliaments
+	focus = {
+		id = CRO_local_parliaments
+		#icon = GFX_
+		prerequisite = { focus = CRO_subordinate_monarch }
+		x = 4
+		y = 3
+
+		cost = 20
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_popularity {
+				ideology = neutrality
+				popularity = 0.2
+			}
+			add_popularity {
+				ideology = fascism
+				popularity = -0.1
+			}
+			add_popularity {
+				ideology = democratic
+				popularity = -0.1
+			}
+			add_popularity {
+				ideology = communism
+				popularity = -0.1
+			}
+		}
+	}
+
+	#Elect a President
+	focus = {
+		id = CRO_elect_president
+		#icon = GFX_
+		prerequisite = { focus = CRO_local_parliaments }
+		x = 4
+		y = 4
+
+		cost = 10
+
+		available = {
+			CRO {
+				neutrality > 0.6
+			}
+		}
+		
+		bypass = {
+			has_government = neutrality
+		}
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			set_politics {
+				ruling_party = neutrality
+				elections_allowed = yes
+			}
+		}
+	}
+
+	#Let the Monarch Rule
+	focus = {
+		id = CRO_let_monarch_rule
+		#icon = GFX_
+		prerequisite = { focus = CRO_find_royal_family }
+		mutually_exclusive = { focus = CRO_subordinate_monarch }
+		x = 6
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_popularity {
+				ideology = monarchism
+				popularity = 0.1
+			}
+			add_political_power = 75
+		}
+	}
+
+	#Prince's Figureheads
+	focus = {
+		id = CRO_prince_figureheads
+		#icon = GFX_
+		prerequisite = { focus = CRO_let_monarch_rule }
+		x = 6
+		y = 3
+
+		cost = 30
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_popularity {
+				ideology = monarchism
+				popularity = 0.2
+			}
+			add_popularity {
+				ideology = fascism
+				popularity = -0.4
+			}
+			add_popularity {
+				ideology = democratic
+				popularity = -0.4
+			}
+			add_popularity {
+				ideology = communism
+				popularity = -0.4
+			}
+			add_popularity {
+				ideology = neutrality
+				popularity = -0.4
+			}
+		}
+	}
+
+	#Elect a King
+	focus = {
+		id = CRO_elect_king
+		#icon = GFX_
+		prerequisite = { focus = CRO_prince_figureheads }
+		x = 6
+		y = 4
+
+		cost = 5
+
+		available = {
+			CRO {
+				monarchism > 0.6
+			}
+		}
+		
+		bypass = {
+			has_government = monarchism
+		}
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			set_politics {
+				ruling_party = monarchism
+				elections_allowed = no
+			}
+		}
+	}
+
+	#Treaty of Split
+	focus = {
+		id = CRO_treaty_split
+		#icon = GFX_
+		prerequisite = { focus = CRO_elect_president focus = CRO_elect_king }
+		x = 5
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			set_capital = 103
+			add_stability = 0.05
+			add_political_power = 100
+			set_rule = {
+				can_create_factions = yes
+				can_send_volunteers = yes
+			}
+		}
+	}
+
+	#Defend Croatian Lands
+	focus = {
+		id = CRO_defend_croatian_lands
+		#icon = GFX_
+		prerequisite = { focus = CRO_treaty_split }
+		x = 5
+		y = 6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_command_power = 50
+			create_faction = "Balkan Protection League"
+			add_manpower = 20000
+			army_experience = 20
+		}
+	}
+
+	#Strengthen Industry
+	focus = {
+		id = CRO_strengthen_industry
+		#icon = GFX_
+		prerequisite = { focus = CRO_defend_croatian_lands }
+		x = 5
+		y = 7
+
+		cost = 30
+
+		available = {
+			CRO = {
+				owns_state = 776
+				controls_state = 776
+				owns_state = 766
+				controls_state = 766
+				owns_state = 103
+				controls_state = 103
+				owns_state = 109
+				controls_state = 109
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			776 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			766 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			103 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			109 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Western Appearance
+	focus = {
+		id = CRO_western_appearance
+		#icon = GFX_
+		prerequisite = { focus = CRO_croatian_legacy }
+		mutually_exclusive = { focus = CRO_keep_nationalist_movements }
+		mutually_exclusive = { focus = CRO_find_royal_family }
+		mutually_exclusive = { focus = CRO_recognize_soviet_union }
+		x = 9
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_popularity {
+				ideology = democratic
+				popularity = 0.05
+			}
+		}
+	}
+
+	#People's Freedoms
+	focus = {
+		id = CRO_people_freedoms
+		#icon = GFX_
+		prerequisite = { focus = CRO_western_appearance }
+		x = 8
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_ideas {
+				generic_democratic_reformer
+			}
+		}
+	}
+
+	#Society Support
+	focus = {
+		id = CRO_society_support
+		#icon = GFX_
+		prerequisite = { focus = CRO_western_appearance }
+		x = 10
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_popularity {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_political_power = 100
+		}
+	}
+
+	#Organize Free Elections
+	focus = {
+		id = CRO_organize_free_elections
+		#icon = GFX_
+		prerequisite = { focus = CRO_people_freedoms }
+		prerequisite = { focus = CRO_society_support }
+		x = 9
+		y = 3
+
+		cost = 10
+
+		available = {
+			CRO {
+				democratic > 0.6
+			}
+		}
+		
+		bypass = {
+			has_government =  democratic
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			set_politics {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+		}
+	}
+
+	#Strengthen Economy
+	focus = {
+		id = CRO_strengthen_economy
+		#icon = GFX_
+		prerequisite = { focus = CRO_organize_free_elections }
+		x = 10
+		y = 4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			swap_ideas = {
+    			add_idea = free_trade
+    			remove_idea = export_focus
+			}
+		}
+	}
+
+	#Organize European Cooperation
+	focus = {
+		id = CRO_organize_european_cooperation
+		#icon = GFX_
+		prerequisite = { focus = CRO_organize_free_elections }
+		x = 8
+		y = 4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_opinion_modifier = {
+				target = ENG
+				modifier = democratic_leanings_good
+			}
+			add_opinion_modifier = {
+				target = FRA
+				modifier = democratic_leanings_good
+			}
+			ENG = {
+				add_opinion_modifier = {
+				target = CRO
+				modifier = democratic_leanings_good
+				}
+			}
+			FRA = {
+				add_opinion_modifier = {
+				target = CRO
+				modifier = democratic_leanings_good
+				}
+			}
+		}
+	}
+
+	#Strengthen Local Companies
+	focus = {
+		id = CRO_strengthen_local_companies
+		#icon = GFX_
+		prerequisite = { focus = CRO_organize_european_cooperation }
+		x = 8
+		y = 5
+
+		cost = 10
+
+		available = {
+			CRO = {
+				owns_state = 766
+				controls_state = 766
+			}
+		}
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			766 = {
+				add_resource = {
+					type = steel
+					amount = 9
+				}
+				add_resource = {
+					type = oil
+					amount = 2
+				}
+			}
+		}
+	}
+
+	#Strengthen Economy II
+	focus = {
+		id = CRO_strengthen_economy_2
+		#icon = GFX_
+		prerequisite = { focus = CRO_strengthen_economy }
+		x = 10
+		y = 5
+
+		cost = 10
+
+		available = {
+			CRO = {
+				owns_state = 109
+				controls_state = 109
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			109 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Organized Cooperation
+	focus = {
+		id = CRO_organized_cooperation
+		#icon = GFX_
+		prerequisite = { focus = CRO_strengthen_local_companies }
+		prerequisite = { focus = CRO_strengthen_economy_2 }
+		x = 9
+		y = 6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			ENG = {
+				country_event = generic.2
+			}
+		}
+	}
+
+	#Recognize Soviet Union
+	focus = {
+		id = CRO_recognize_soviet_union
+		#icon = GFX_
+		prerequisite = { focus = CRO_croatian_legacy }
+		mutually_exclusive = { focus = CRO_keep_nationalist_movements }
+		mutually_exclusive = { focus = CRO_find_royal_family }
+		mutually_exclusive = { focus = CRO_western_appearance }
+		x = 13
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			news_event = croatia_ab.4
+		}
+	}
+
+	#Communists in the Government
+	focus = {
+		id = CRO_communist_in_government
+		#icon = GFX_
+		prerequisite = { focus = CRO_recognize_soviet_union }
+		x = 12
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+		}
+	}
+
+	#Influence the Public
+	focus = {
+		id = CRO_influence_public
+		#icon = GFX_
+		prerequisite = { focus = CRO_recognize_soviet_union }
+		x = 14
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_ideas {
+				generic_communist_revolutionary
+			}
+		}
+	}
+
+	#Censor the Media
+	focus = {
+		id = CRO_censor_media
+		#icon = GFX_
+		prerequisite = { focus = CRO_communist_in_government focus = CRO_influence_public }
+		x = 14
+		y = 3
+
+		cost = 20
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_popularity {
+				ideology = fascism
+				popularity = -0.2
+			}
+			add_popularity {
+				ideology = neutrality
+				popularity = -0.2
+			}
+			add_popularity {
+				ideology = democratic
+				popularity = -0.2
+			}
+		}
+	}
+
+	#Communist Government
+	focus = {
+		id = CRO_communist_government
+		#icon = GFX_
+		prerequisite = { focus = CRO_communist_in_government }
+		prerequisite = { focus = CRO_influence_public }
+		prerequisite = { focus = CRO_censor_media }
+		x = 13
+		y = 4
+
+		cost = 10
+
+		available = {
+			CRO {
+				communism > 0.6
+			}
+		}
+		
+		bypass = {
+			has_government = communism
+		}
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			set_politics {
+				ruling_party = communism
+				elections_allowed = no
+			}
+		}
+	}
+
+	#Claim Slovenia
+	focus = {
+		id = CRO_claim_slovenia
+		#icon = GFX_
+		prerequisite = { focus = CRO_communist_government }
+		x = 12
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			CRO = {
+				add_state_claim = 102
+				add_state_claim = 773
+				add_state_claim = 770
+				add_state_claim = 777
+			}
+		}
+	}
+
+	#Demand Bosnian Integration
+	focus = {
+		id = CRO_demand_bosnian_integration
+		#icon = GFX_
+		prerequisite = { focus = CRO_communist_government }
+		x = 14
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			BOS = {
+				country_event = croatia_ab.5
+			}
+		}
+	}
+
+	#Appease Soviet Union
+	focus = {
+		id = CRO_appease_soviet_union
+		#icon = GFX_
+		prerequisite = { focus = CRO_claim_slovenia }
+		prerequisite = { focus = CRO_demand_bosnian_integration }
+		x = 13
+		y = 6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_opinion_modifier = {
+				target = SOV
+				modifier = communism_leanings_good
+			}
+			SOV = {
+				add_opinion_modifier = {
+					target = CRO
+					modifier = communism_leanings_good
+				}
+			}
+		}
+	}
+
+	#Join Comintern
+	focus = {
+		id = CRO_join_comintern
+		#icon = GFX_
+		prerequisite = { focus = CRO_appease_soviet_union }
+		x = 13
+		y = 7
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			SOV = {
+				country_event = generic.2
+			}
+		}
+	}
+
+	#Influence the Neighbours
+	focus = {
+		id = CRO_influence_neighbours
+		#icon = GFX_
+		prerequisite = { focus = CRO_join_comintern }
+		x = 12
+		y = 8
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			AUS = {
+				add_timed_idea = { idea = comintern_influence days = 1095 }
+			}
+			HUN = {
+				add_timed_idea = { idea = comintern_influence days = 1095 }
+			}
+			SER = {
+				add_timed_idea = { idea = comintern_influence days = 1095 }
+			}
+		}
+	}
+
+	#Nationalization of Croatia
+	focus = {
+		id = CRO_nationalization_of_croatia
+		#icon = GFX_
+		prerequisite = { focus = CRO_join_comintern }
+		x = 14
+		y = 8
+
+		cost = 10
+
+		available = {
+			CRO = {
+				owns_state = 766
+				controls_state = 766
+				owns_state = 109
+				controls_state = 109
+				owns_state = 103
+				controls_state = 103
+			}
+		}
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			766 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			109 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			103 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Proclaim Soviet Republic of Croats
+	focus = {
+		id = CRO_proclaim_soviet_republic_of_croats
+		#icon = GFX_
+		prerequisite = { focus = CRO_influence_neighbours }
+		prerequisite = { focus = CRO_nationalization_of_croatia }
+		x = 13
+		y = 9
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			country_event = croatia_ab.19
+		}
+	}
+
+	#Country's Preparation
+	focus = {
+		id = CRO_country_preparation
+		#icon = GFX_
+		prerequisite = { focus = CRO_unite_the_balkans }
+		x = 18
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			#Paweu: National Spirit 'Unification'
+		}
+	}
+
+	#Arise Unification Aura
+	focus = {
+		id = CRO_arise_unification_aura
+		#icon = GFX_
+		prerequisite = { focus = CRO_unite_the_balkans }
+		x = 22
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_opinion_modifier = {
+					target = SLV
+					modifier = unification_aura
+				}
+			add_opinion_modifier = {
+					target = BOS
+					modifier = unification_aura
+				}
+			add_opinion_modifier = {
+					target = SER
+					modifier = unification_aura
+				}
+			add_opinion_modifier = {
+					target = ALB
+					modifier = unification_aura
+				}
+		}
+	}
+
+	#First Important Moves
+	focus = {
+		id = CRO_first_important_moves
+		#icon = GFX_
+		prerequisite = { focus = CRO_country_preparation }
+		prerequisite = { focus = CRO_arise_unification_aura }
+		x = 20
+		y = 2
+
+		cost = 15
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 150
+			SLV = {
+				add_opinion_modifier = {
+					target = CRO
+					modifier = unification_aura
+				}
+			}
+			BOS = {
+				add_opinion_modifier = {
+					target = CRO
+					modifier = unification_aura
+				}
+			}
+			ALB = {
+				add_opinion_modifier = {
+					target = CRO
+					modifier = unification_aura
+				}
+			}
+			SER = {
+				add_opinion_modifier = {
+					target = CRO
+					modifier = unification_aura
+				}
+			}
+		}
+	}
+
+	#Appease Slovenia
+	focus = {
+		id = CRO_appease_slovenia
+		#icon = GFX_
+		prerequisite = { focus = CRO_first_important_moves }
+		x = 17
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_opinion_modifier = {
+					target = SLV
+					modifier = appease
+				}
+			SLV = {
+				add_opinion_modifier = {
+					target = CRO
+					modifier = appease
+				}
+			}
+		}
+	}
+
+	#Slovenian-Croatian Agreement
+	focus = {
+		id = CRO_slovenian_croatian_agreement
+		#icon = GFX_
+		prerequisite = { focus = CRO_first_important_moves }
+		x = 20
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			SLV = { 
+				country_event = croatia_ab.6 
+			}
+		}
+	}
+
+	#Merge Our Politics
+	focus = {
+		id = CRO_merge_our_politics
+		#icon = GFX_
+		prerequisite = { focus = CRO_first_important_moves }
+		x = 23 
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			SLV = {
+				country_event = croatia_ab.7
+			}
+		}
+	}
+
+	#Proclaim Croatia-Slovenia
+	focus = {
+		id = CRO_proclaim_croatia_slovenia
+		#icon = GFX_
+		prerequisite = { focus = CRO_appease_slovenia }
+		prerequisite = { focus = CRO_slovenian_croatian_agreement }
+		prerequisite = { focus = CRO_merge_our_politics }
+		x = 20
+		y = 4
+
+		cost = 15
+
+		available = {
+			CRO = {
+				owns_state = 777
+				owns_state = 770
+				owns_state = 102
+				owns_state = 773
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			country_event = croatia_ab.20
+		}
+	}
+
+	#First Illyrian Agreement
+	focus = {
+		id = CRO_first_illyrian_agreement
+		#icon = GFX_
+		prerequisite = { focus = CRO_proclaim_croatia_slovenia }
+		x = 17
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			BOS = {
+				add_political_power = 50
+				country_event = croatia_ab.8
+			}
+		}
+	}
+
+	#Further Balkan Unification
+	focus = {
+		id = CRO_further_balkan_unification
+		#icon = GFX_
+		prerequisite = { focus = CRO_proclaim_croatia_slovenia }
+		x = 20
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_opinion_modifier = {
+					target = BOS
+					modifier = appease
+				}
+			BOS = {
+				add_opinion_modifier = {
+					target = CRO
+					modifier = appease
+				}
+			}
+		}
+	}
+
+	#Second Illyrian Agreement
+	focus = {
+		id = CRO_second_illyrian_agreement
+		#icon = GFX_
+		prerequisite = { focus = CRO_proclaim_croatia_slovenia }
+		x = 23
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			BOS = {
+				add_political_power = 50
+				country_event = croatia_ab.9
+			}
+		}
+	}
+
+	#Proclaim Illyria
+	focus = {
+		id = CRO_proclaim_illyria
+		#icon = GFX_
+		prerequisite = { focus = CRO_first_illyrian_agreement }
+		prerequisite = { focus = CRO_further_balkan_unification }
+		prerequisite = { focus = CRO_second_illyrian_agreement }
+		x = 20
+		y = 6
+
+		cost = 15
+
+		available = {
+			CRO = {
+				owns_state = 777
+				owns_state = 770
+				owns_state = 102
+				owns_state = 773
+				owns_state = 104
+				owns_state = 768
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			country_event = croatia_ab.21
+		}
+	}
+
+	#Cede Mali i Zi
+	focus = {
+		id = CRO_cede_mali_i_zi
+		#icon = GFX_
+		prerequisite = { focus = CRO_proclaim_illyria }
+		x = 18
+		y = 7
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			ALB = {
+				country_event = croatia_ab.10
+			}
+		}
+	}
+
+	#Partition of Serbia
+	focus = {
+		id = CRO_partition_of_serbia
+		#icon = GFX_
+		prerequisite = { focus = CRO_proclaim_illyria }
+		x = 22
+		y = 7
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			ROM = {
+				country_event = croatia_ab.11
+			}
+		}
+	}
+
+	#United Dream
+	focus = {
+		id = CRO_united_dream
+		#icon = GFX_
+		prerequisite = { focus = CRO_cede_mali_i_zi }
+		prerequisite = { focus = CRO_partition_of_serbia }
+		x = 20
+		y = 8
+
+		cost = 15
+
+		available = {
+			CRO = {
+				owns_state = 102
+				owns_state = 770
+				owns_state = 777
+				owns_state = 773
+				owns_state = 104
+				owns_state = 768
+				owns_state = 105
+				owns_state = 108
+				owns_state = 107
+				owns_state = 775
+			}
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			#Paweu: National Spirit 'Croatian Unification' replaced with 'United Dream'
+		}
+	}
+
+	#New National Consciousness
+	focus = {
+		id = CRO_new_national_consciousness
+		#icon = GFX_
+		prerequisite = { focus = CRO_united_dream }
+		x = 20
+		y = 10
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_stability = 0.15
+			add_political_power = 100
+			add_manpower = 15000
+		}
+	}
+
+	#Illyrian Congress
+	focus = {
+		id = CRO_illyrian_congress
+		#icon = GFX_
+		prerequisite = { focus = CRO_new_national_consciousness }
+		mutually_exclusive = { focus = CRO_empower_royal_family }
+		mutually_exclusive = { focus = CRO_westernize_illyria }
+		mutually_exclusive = { focus = CRO_strengthen_fascist_movements }
+		mutually_exclusive = { focus = CRO_communist_appearance }
+		x = 12
+		y = 11
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_popularity {
+				ideology = neutrality
+				popularity = 0.05
+			}
+		}
+	}
+
+	#Neutralize Country
+	focus = {
+		id = CRO_neutralize_country
+		#icon = GFX_
+		prerequisite = { focus = CRO_illyrian_congress }
+		x = 11
+		y = 12
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_popularity {
+				ideology = fascism
+				popularity = -0.1
+			}
+			add_popularity {
+				ideology = communism
+				popularity = -0.1
+			}
+			add_popularity {
+				ideology = democratic
+				popularity = -0.1
+			}
+		}
+	}
+
+	#Reorganize the State
+	focus = {
+		id = CRO_reorganize_state
+		#icon = GFX_
+		prerequisite = { focus = CRO_illyrian_congress }
+		x = 13
+		y = 12
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_ideas = {
+				neutrality_idea
+			}
+		}
+	}
+
+	#Isolate the Balkans
+	focus = {
+		id = CRO_isolate_balkans
+		#icon = GFX_
+		prerequisite = { focus = CRO_neutralize_country }
+		x = 11
+		y = 13
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			#Paweu: 'Balkan Isolation' idea
+		}
+	}
+
+	#Strengthen Congress Neutrality
+	focus = {
+		id = CRO_strengthen_congress_neutrality
+		#icon = GFX_
+		prerequisite = { focus = CRO_reorganize_state }
+		x = 13
+		y = 13
+
+		cost = 15
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_popularity {
+				ideology = neutrality
+				popularity = 0.2
+			}
+		}
+	}
+
+	#Neutral Congress of Illyria
+	focus = {
+		id = CRO_neutral_congress_of_illyria
+		#icon = GFX_
+		prerequisite = { focus = CRO_isolate_balkans }
+		prerequisite = { focus = CRO_strengthen_congress_neutrality }
+		x = 12
+		y = 14
+
+		cost = 10
+
+		available = {
+			CRO {
+				neutrality > 0.6
+			}
+		}
+		
+		bypass = {
+			has_government = neutrality
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			set_politics {
+				ruling_party = neutrality
+				elections_allowed = yes
+			}
+		}
+	}
+
+	#Nationalize Illyria
+	focus = {
+		id = CRO_nationalize_illyria
+		#icon = GFX_
+		prerequisite = { focus = CRO_neutral_congress_of_illyria }
+		x = 11
+		y = 15
+
+		cost = 10
+
+		available = {
+			CRO = {
+				owns_state = 104
+				controls_state = 104
+				owns_state = 766
+				controls_state = 766
+				owns_state = 102
+				controls_state = 102
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			104 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			766 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			102 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Balkan Protection Union
+	focus = {
+		id = CRO_balkan_protection_union
+		#icon = GFX_
+		prerequisite = { focus = CRO_neutral_congress_of_illyria }
+		x = 13
+		y = 15
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			CRO = {
+				create_faction = "Balkan Protection Union"
+			}
+		}
+	}
+
+	#Further Nationalization
+	focus = {
+		id = CRO_further_nationalization
+		#icon = GFX_
+		prerequisite = { focus = CRO_nationalize_illyria }
+		x = 11
+		y = 16
+
+		cost = 10
+
+		available = {
+			CRO = {
+				owns_state = 109
+				controls_state = 109
+				owns_state = 776
+				controls_state = 776
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			109 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			776 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Invite Romania
+	focus = {
+		id = CRO_invite_romania
+		#icon = GFX_
+		prerequisite = { focus = CRO_balkan_protection_union }
+		x = 13
+		y = 16
+
+		cost = 10
+
+		available = {
+			ROM = {
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = CRO }
+				is_in_faction = no
+			}
+		}
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_to_faction = ROM
+		}
+	}
+
+	#Develop Industrial Districts
+	focus = {
+		id = CRO_develop_industrial_districts
+		#icon = GFX_
+		prerequisite = { focus = CRO_further_nationalization }
+		x = 11
+		y = 17
+
+		cost = 10
+
+		available = {
+			CRO = {
+				owns_state = 766
+				controls_state = 766
+				owns_state = 109
+				controls_state = 109
+			}
+		}
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			766 = {
+				add_resource = {
+					type = steel
+					amount = 9
+				}
+				add_resource = {
+					type = aluminium
+					amount = 2
+				}
+			}
+			109 = {
+				add_resource = {
+					type = tungsten
+					amount = 3
+				}
+			}
+		}
+	}
+
+	#Invite Albania
+	focus = {
+		id = CRO_invite_albania
+		#icon = GFX_
+		prerequisite = { focus = CRO_invite_romania }
+		x = 13
+		y = 17
+
+		cost = 10
+
+		available = {
+			ALB = {
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = CRO }
+				is_in_faction = no
+			}
+		}
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_to_faction = ALB
+		}
+	}
+
+	#Empower Royal Family
+	focus = {
+		id = CRO_empower_royal_family
+		#icon = GFX_
+		prerequisite = { focus = CRO_new_national_consciousness }
+		mutually_exclusive = { focus = CRO_illyrian_congress }
+		mutually_exclusive = { focus = CRO_westernize_illyria }
+		mutually_exclusive = { focus = CRO_strengthen_fascist_movements }
+		mutually_exclusive = { focus = CRO_communist_appearance }
+		x = 16
+		y = 11
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_popularity {
+				ideology = monarchism
+				popularity = 0.1
+			}
+		}
+	}
+
+	#Establish a King
+	focus = {
+		id = CRO_establish_king
+		#icon = GFX_
+		prerequisite = { focus = CRO_empower_royal_family }
+		x = 15
+		y = 12
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_political_power = 75
+			add_popularity {
+				ideology = monarchism
+				popularity = 0.05
+			}
+		}
+	}
+
+	#Organize the Royal Court
+	focus = {
+		id = CRO_organize_royal_court
+		#icon = GFX_
+		prerequisite = { focus = CRO_empower_royal_family }
+		x = 17
+		y = 12
+
+		cost = 20
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_stability = 0.15
+			add_popularity {
+				ideology = monarchism
+				popularity = 0.2
+			}
+		}
+	}
+
+	#Long Live the King
+	focus = {
+		id = CRO_long_live_king
+		#icon = GFX_
+		prerequisite = { focus = CRO_establish_king }
+		prerequisite = { focus = CRO_organize_royal_court }
+		x = 16
+		y = 13
+
+		cost = 10
+
+		available = {
+			CRO {
+				monarchism > 0.6
+			}
+		}
+		
+		bypass = {
+			has_government = monarchism
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			set_politics {
+				ruling_party = monarchism
+				elections_allowed = no
+			}
+		}
+	}
+
+	#Expanding Illyrian Influence
+	focus = {
+		id = CRO_expanding_illyrian_influence
+		#icon = GFX_
+		prerequisite = { focus = CRO_long_live_king }
+		x = 16
+		y = 14
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			ALB = {
+				add_opinion_modifier = {
+					tag = CRO
+					modifier = illyrian_influence
+				}
+			}
+			GRE = {
+				add_opinion_modifier = {
+					tag = CRO
+					modifier = illyrian_influence
+				}
+			}
+			ROM = {
+				add_opinion_modifier = {
+					tag = CRO
+					modifier = illyrian_influence
+				}
+			}
+		}
+	}
+
+	#Influence Albania
+	focus = {
+		id = CRO_influence_albania
+		#icon = GFX_
+		prerequisite = { focus = CRO_expanding_illyrian_influence }
+		x = 15
+		y = 15
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			#Paweu: Idea based on 'Comintern Influence' - adding monarchy popularity
+		}
+	}
+
+	#Influence Greece
+	focus = {
+		id = CRO_influence_greece
+		#icon = GFX_
+		prerequisite = { focus = CRO_expanding_illyrian_influence }
+		x = 17
+		y = 15
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			#Paweu: Idea based on 'Comintern Influence' - adding monarchy popularity
+		}
+	}
+
+	#Establish Balkan Entente
+	focus = {
+		id = CRO_establish_balkan_entente
+		#icon = GFX_
+		prerequisite = { focus = CRO_influence_albania }
+		prerequisite = { focus = CRO_influence_greece }
+		x = 16
+		y = 16
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			create_faction = "Balkan Entente"
+			set_rule = {
+				can_create_factions = yes
+			}
+		}
+	}
+
+	#Westernize Illyria
+	focus = {
+		id = CRO_westernize_illyria
+		#icon = GFX_
+		prerequisite = { focus = CRO_new_national_consciousness }
+		mutually_exclusive = { focus = CRO_illyrian_congress }
+		mutually_exclusive = { focus = CRO_empower_royal_family }
+		mutually_exclusive = { focus = CRO_strengthen_fascist_movements }
+		mutually_exclusive = { focus = CRO_communist_appearance }
+		x = 20
+		y = 11
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_popularity {
+				ideology = democratic
+				popularity = 0.1
+			}
+		}
+	}
+
+	#Westernize Governmet
+	focus = {
+		id = CRO_westernize_government
+		#icon = GFX_
+		prerequisite = { focus = CRO_westernize_illyria }
+		x = 19
+		y = 12
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_ideas {
+				democratic_influence
+			}
+		}
+	}
+
+	#Westernize Constitution
+	focus = {
+		id = CRO_westernize_constitution
+		#icon = GFX_
+		prerequisite = { focus = CRO_westernize_illyria }
+		x = 21
+		y = 12
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_ideas {
+				generic_democratic_reformer
+			}
+		}
+	}
+
+	#Western Government
+	focus = {
+		id = CRO_western_government
+		#icon = GFX_
+		prerequisite = { focus = CRO_westernize_government }
+		prerequisite = { focus = CRO_westernize_constitution }
+		x = 20
+		y = 13
+
+		cost = 10
+
+		available = {
+			CRO {
+				democratic > 0.6
+			}
+		}
+		
+		bypass = {
+			has_government = democratic
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			set_politics {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+		}
+	}
+
+	#Influence Balkan Sphere
+	focus = {
+		id = CRO_influence_balkan_sphere
+		#icon = GFX_
+		prerequisite = { focus = CRO_western_government }
+		x = 20
+		y = 14
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			ROM = {
+				add_ideas {
+					democratic_influence
+				}
+			}
+			GRE = {	
+				add_ideas {
+					democratic_influence
+				}
+			}
+			ALB = {
+				add_ideas {
+					democratic_influence
+				}
+			}
+		}
+	}
+
+	#Balkan League
+	focus = {
+		id = CRO_balkan_league
+		#icon = GFX_
+		prerequisite = { focus = CRO_influence_balkan_sphere }
+		x = 20
+		y = 15
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			create_faction = "Balkan League"
+			set_rule = {
+				can_create_factions = yes
+			}
+		}
+	}
+
+	#Invite Romania
+	focus = {
+		id = CRO_invite_romania_democracy
+		#icon = GFX_
+		prerequisite = { focus = CRO_balkan_league }
+		x = 19
+		y = 16
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_to_faction = ROM
+		}
+	}
+
+	#Invite Greece
+	focus = {
+		id = CRO_invite_greece
+		#icon = GFX_
+		prerequisite = { focus = CRO_balkan_league }
+		x = 21
+		y = 16
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_to_faction = GRE
+		}
+	}
+
+	#Bulgarian Question
+	focus = {
+		id = CRO_bulgarian_question
+		#icon = GFX_
+		prerequisite = { focus = CRO_invite_romania_democracy }
+		prerequisite = { focus = CRO_invite_greece }
+		x = 20
+		y = 17
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			BUL = {
+				country_event = croatia_ab.12
+			}
+		}
+	}
+
+	#Balkan Republic Idea
+	focus = {
+		id = CRO_balkan_republic_idea
+		#icon = GFX_
+		prerequisite = { focus = CRO_bulgarian_question }
+		x = 20
+		y = 18
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			#Paweu: National Spirit 'Balkan Republic' here!
+		}
+	}
+
+	#Strengthen Fascist Movements
+	focus = {
+		id = CRO_strengthen_fascist_movements
+		#icon = GFX_
+		prerequisite = { focus = CRO_new_national_consciousness }
+		mutually_exclusive = { focus = CRO_illyrian_congress }
+		mutually_exclusive = { focus = CRO_empower_royal_family }
+		mutually_exclusive = { focus = CRO_westernize_illyria }
+		mutually_exclusive = { focus = CRO_communist_appearance }
+		x = 24
+		y = 11
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_ideas {
+				generic_fascist_demagogue
+			}
+		}
+	}
+
+	#March on Zagreb
+	focus = {
+		id = CRO_march_on_zagreb
+		#icon = GFX_
+		prerequisite = { focus = CRO_strengthen_fascist_movements }
+		x = 23
+		y = 12
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_political_power = 75
+			add_ideas = {
+				nationalism
+			}
+		}
+	}
+
+	#March on Split
+	focus = {
+		id = CRO_march_on_split
+		#icon = GFX_
+		prerequisite = { focus = CRO_strengthen_fascist_movements }
+		x = 25
+		y = 12
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity {
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+	}
+
+	#Fascist Illyrian Government
+	focus = {
+		id = CRO_fascist_illyrian_government
+		#icon = GFX_
+		prerequisite = { focus = CRO_march_on_zagreb }
+		prerequisite = { focus = CRO_march_on_split }
+		x = 24
+		y = 13
+
+		cost = 10
+
+		available = {
+			CRO {
+				fascism > 0.6
+			}
+		}
+		
+		bypass = {
+			has_government = fascism
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no	
+			}
+			add_ideas = {
+				fascist_influence
+			}
+		}
+	}
+
+	#Demand Macedonia
+	focus = {
+		id = CRO_demand_macedonia
+		#icon = GFX_
+		prerequisite = { focus = CRO_fascist_illyrian_government }
+		x = 23
+		y = 14
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			BUL = {
+				country_event = croatia_ab.13
+			}
+		}
+	}
+
+	#Influence Albania
+	focus = {
+		id = CRO_influence_albania_fascist
+		#icon = GFX_
+		prerequisite = { focus = CRO_fascist_illyrian_government }
+		x = 25
+		y = 14
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			ALB = {
+				add_ideas = {
+					fascist_influence
+				}
+			}
+		}
+	}
+
+	#Influence Romania
+	focus = {
+		id = CRO_influence_romania
+		#icon = GFX_
+		prerequisite = { focus = CRO_demand_macedonia }
+		x = 23
+		y = 15
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			ROM = {
+				add_ideas = {
+					fascist_influence
+				}
+			}
+		}
+	}
+
+	#Puppet Albania
+	focus = {
+		id = CRO_puppet_albania
+		#icon = GFX_
+		prerequisite = { focus = CRO_influence_albania_fascist }
+		x = 25
+		y = 15
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			ALB = {
+				country_event = croatia_ab.14
+			}
+		}
+	}
+
+	#Balkan Axis
+	focus = {
+		id = CRO_balkan_axis
+		#icon = GFX_
+		prerequisite = { focus = CRO_influence_romania }
+		prerequisite = { focus = CRO_puppet_albania }
+		x = 24
+		y = 16
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			create_faction = "Balkan Axis"
+		}
+	}
+
+	#Invite Greece
+	focus = {
+		id = CRO_invite_greece_fascist
+		#icon = GFX_
+		prerequisite = { focus = CRO_balkan_axis }
+		x = 23
+		y = 17
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_to_faction = GRE
+		}
+	}
+
+
+	#Invite Romania
+	focus = {
+		id = CRO_invite_romania_fascist
+		#icon = GFX_
+		prerequisite = { focus = CRO_balkan_axis }
+		x = 25
+		y = 17
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_to_faction = ROM
+		}
+	}
+
+	#Communist Appearance
+	focus = {
+		id = CRO_communist_appearance
+		#icon = GFX_
+		prerequisite = { focus = CRO_new_national_consciousness }
+		mutually_exclusive = { focus = CRO_illyrian_congress }
+		mutually_exclusive = { focus = CRO_empower_royal_family }
+		mutually_exclusive = { focus = CRO_westernize_illyria }
+		mutually_exclusive = { focus = CRO_strengthen_fascist_movements }
+		x = 28
+		y = 11
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+	}
+
+	#Soviet Influence
+	focus = {
+		id = CRO_soviet_influence
+		#icon = GFX_
+		prerequisite = { focus = CRO_communist_appearance }
+		x = 27
+		y = 12
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_ideas = {
+				communist_influence
+			}
+		}
+	}
+
+	#Inside Influence
+	focus = {
+		id = CRO_inside_influence
+		#icon = GFX_
+		prerequisite = { focus = CRO_communist_appearance }
+		x = 29
+		y = 12
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_ideas = {
+				generic_communist_revolutionary
+			}
+		}
+	}
+
+	#Communist State
+	focus = {
+		id = CRO_communist_state
+		#icon = GFX_
+		prerequisite = { focus = CRO_soviet_influence }
+		prerequisite = { focus = CRO_inside_influence }
+		x = 28
+		y = 13
+
+		cost = 10
+
+		available = {
+			CRO {
+				communism > 0.6
+			}
+		}
+		
+		bypass = {
+			has_government = communism
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+		}
+	}
+
+	#Pro-Balkan Ideas
+	focus = {
+		id = CRO_probalkan_ideas
+		#icon = GFX_
+		prerequisite = { focus = CRO_communist_state }
+		mutually_exclusive = { focus = CRO_prosoviet_ideas }
+		x = 27
+		y = 14
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			#National Spirit 'Balkan Communism' here!
+		}
+	}
+
+	#Pro-Soviet Ideas
+	focus = {
+		id = CRO_prosoviet_ideas
+		#icon = GFX_
+		prerequisite = { focus = CRO_communist_state }
+		mutually_exclusive = { focus = CRO_probalkan_ideas }
+		x = 29
+		y = 14
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			SOV = {
+				add_opinion_modifier = {
+					target = CRO
+					modifier = prosoviet_ideas
+				}
+			}
+		}
+	}
+
+	#Invite Tito Over
+	focus = {
+		id = CRO_invite_tito_over
+		#icon = GFX_
+		prerequisite = { focus = CRO_probalkan_ideas }
+		x = 27
+		y = 15
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_stability = 0.05
+			country_event = croatia_ab.15
+		}
+	}
+
+	#Pro-Soviet Government
+	focus = {
+		id = CRO_prosoviet_government
+		#icon = GFX_
+		prerequisite = { focus = CRO_prosoviet_ideas }
+		x = 29
+		y = 15
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			SOV = {
+				country_event = croatia_ab.16
+			}
+		}
+	}
+
+	#Proclaim Yugoslavia
+	focus = {
+		id = CRO_proclaim_yugoslavia
+		#icon = GFX_
+		prerequisite = { focus = CRO_invite_tito_over }
+		x = 27
+		y = 16
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			set_capital = 107
+			country_event = croatia_ab.22
+		}
+	}
+
+	#Join Comintern
+	focus = {
+		id = CRO_join_comintern_ub
+		#icon = GFX_
+		prerequisite = { focus = CRO_prosoviet_government }
+		x = 29
+		y = 16
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			SOV = {
+				add_to_faction = CRO
+			}
+		}
+	}
+
+	#Take Yugoslavian Lands
+	focus = {
+		id = CRO_take_yugoslavian_lands
+		#icon = GFX_
+		prerequisite = { focus = CRO_proclaim_yugoslavia }
+		x = 27
+		y = 17
+
+		cost = 10
+
+		bypass = {
+			CRO = {
+				owns_state = 106
+				controls_state = 106
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			BUL = {
+				country_event = croatia_ab.13
+			}
+		}
+	}
+}
