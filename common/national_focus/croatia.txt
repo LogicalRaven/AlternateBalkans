@@ -2687,22 +2687,13 @@ focus_tree = {
 
 		completion_reward = {
 			ALB = {
-				add_opinion_modifier = {
-					tag = CRO
-					modifier = illyrian_influence
-				}
+				add_opinion_modifier = { target = CRO modifier = illyrian_influence }
 			}
 			GRE = {
-				add_opinion_modifier = {
-					tag = CRO
-					modifier = illyrian_influence
-				}
+				add_opinion_modifier = { target = CRO modifier = illyrian_influence }
 			}
 			ROM = {
-				add_opinion_modifier = {
-					tag = CRO
-					modifier = illyrian_influence
-				}
+				add_opinion_modifier = { target = CRO modifier = illyrian_influence }
 			}
 		}
 	}
@@ -3719,6 +3710,791 @@ focus_tree = {
 			BUL = {
 				country_event = croatia_ab.13
 			}
+		}
+	}
+
+
+	#INDUSTRIAL PART OF THE FOCUS TREE
+	#Pull Western Investors In
+	focus = {
+		id = CRO_pull_western_investors
+		#icon = GFX_
+		mutually_exclusive = { focus = CRO_invest_modern_influence }
+		mutually_exclusive = { focus = CRO_negotiate_trade_deals_amtorg }
+		x = 31
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			#Paweu:'Western Investors In' idea - +0.02 daily democracy support, +5% construction speed
+		}
+	}
+
+	#Invest in Modern Infrastructure
+	focus = {
+		id = CRO_invest_modern_influence
+		#icon = GFX_
+		mutually_exclusive = { focus = CRO_pull_western_investors }
+		mutually_exclusive = { focus = CRO_negotiate_trade_deals_amtorg }
+		x = 34
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			#Paweu: 'Modern Infrastructure' Idea - +5% infrastructure construction speed, +1 infrastructure for all provinces
+			774 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			45 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			109 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			776 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			766 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			103 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			163 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Negotiate Trade Deals With Amtorg
+	focus = {
+		id = CRO_negotiate_trade_deals_amtorg
+		#icon = GFX_
+		mutually_exclusive = { focus = CRO_pull_western_investors }
+		mutually_exclusive = { focus = CRO_invest_modern_influence }
+		x = 37
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			#Paweu: 'Amtorg' idea - +5% factory output, +0.02 daily communist support
+			SOV = {
+				add_opinion_modifier = {
+					target = CRO
+					modifier = trade_amtorg
+				}
+			}
+			add_opinion_modifier = {
+				target = SOV
+				modifier = trade_amtorg
+			}
+		}
+	}
+
+	#Expand The Civilian Industry Sector
+	focus = {
+		id = CRO_expand_civilian_industry_sector
+		#icon = GFX_
+		prerequisite = { focus = CRO_pull_western_investors }
+		x = 30
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			766 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Found Oseka Shipyards
+	focus = {
+		id = CRO_found_oseka_shipyards
+		#icon = GFX_
+		prerequisite = { focus = CRO_pull_western_investors focus = CRO_invest_modern_influence }
+		x = 32
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			163 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Found Tehnika
+	focus = {
+		id = CRO_found_tehnika
+		#icon = GFX_
+		prerequisite = { focus = CRO_negotiate_trade_deals_amtorg }
+		x = 36
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			#Paweu: 'Tehnika' idea - +5% civilian factory construction speed
+			163 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Influence University of Zagreb
+	focus = {
+		id = CRO_influence_university_zagreb
+		#icon = GFX_
+		prerequisite = { focus = CRO_negotiate_trade_deals_amtorg }
+		x = 38
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			#Paweu: Hidden idea with 'modifier conscription = 0.02' (see Hidden Ideas on hoi4.paradoxwikis.com/Idea_modding)
+			add_research_slot = 1
+		}
+	}
+
+	#Repair Northern Railroads
+	focus = {
+		id = CRO_repair_northern_railroads
+		#icon = GFX_
+		prerequisite = { focus = CRO_expand_civilian_industry_sector }
+		x = 30
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			109 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Repurpose Sljeme Factories
+	focus = {
+		id = CRO_repurpose_sljeme_factories
+		#icon = GFX_
+		prerequisite = { focus = CRO_found_oseka_shipyards }
+		x = 33
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			#Paweu: 'Sljeme Factories' idea - +20% factory conversion speed
+			109 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Build a Modern Highway System
+	focus = {
+		id = CRO_build_mhs
+		#icon = GFX_
+		prerequisite = { focus = CRO_found_tehnika }
+		x = 36
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			774 = {
+				set_building_level = {
+					type = infrastructure
+					level = 8
+					instant_build = yes
+				}
+			}
+			45 = {
+				set_building_level = {
+					type = infrastructure
+					level = 8
+					instant_build = yes
+				}
+			}
+			109 = {
+				set_building_level = {
+					type = infrastructure
+					level = 8
+					instant_build = yes
+				}
+			}
+			776 = {
+				set_building_level = {
+					type = infrastructure
+					level = 8
+					instant_build = yes
+				}
+			}
+			766 = {
+				set_building_level = {
+					type = infrastructure
+					level = 8
+					instant_build = yes
+				}
+			}
+			103 = {
+				set_building_level = {
+					type = infrastructure
+					level = 8
+					instant_build = yes
+				}
+			}
+			163 = {
+				set_building_level = {
+					type = infrastructure
+					level = 8
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Invest in KONCAR Group
+	focus = {
+		id = CRO_invest_koncar_group
+		#icon = GFX_
+		prerequisite = { focus = CRO_repair_northern_railroads  focus = CRO_repurpose_sljeme_factories }
+		x = 31
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			#Paweu: 'KONCAR' Idea - +5% electronics research time, +5% mechanics research time
+		}
+	}
+
+	#Found Viadukt
+	focus = {
+		id = CRO_found_viadukt
+		#icon = GFX_
+		prerequisite = { focus = CRO_repurpose_sljeme_factories }
+		x = 34
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			#Paweu: 'Viadukt' Idea - +5% mechanics research time
+			45 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Fund Local Small Arms Companies
+	focus = {
+		id = CRO_fund_local_sac
+		#icon = GFX_
+		prerequisite = { focus = CRO_build_mhs }
+		prerequisite = { focus = CRO_influence_university_zagreb }
+		x = 37
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			#Paweu: 'Small Arms Companies' Idea - +1% recruitable population, +10% production efficiency
+		}
+	}
+
+	#Exploit Natural Resources
+	focus = {
+		id = CRO_exploit_natural_resources
+		#icon = GFX_
+		prerequisite = { focus = CRO_invest_koncar_group }
+		prerequisite = { focus = CRO_found_viadukt }
+		x = 32
+		y = 4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			766 = {
+				add_resource = {
+					type = steel
+					amount =10
+				}
+			}
+			163 = {
+				add_resource = {
+					type = chromium
+					amount = 8
+				}
+			}
+		}
+	}
+
+	#Run Propaganda Campaigns in Agricultural Centres
+	focus = {
+		id = CRO_propaganda_campaigns_agrcentres
+		#icon = GFX_
+		prerequisite = { focus = CRO_fund_local_sac }
+		x = 39
+		y = 4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			#Paweu: 'Agricultural Propaganda' Idea - +3% recruitable population, -10% population growth, -1% construction speed
+		}
+	}
+
+	#Sponsor University of Zagreb
+	focus = {
+		id = CRO_sponsor_university_zagreb
+		#icon = GFX_
+		prerequisite = { focus = CRO_invest_koncar_group }
+		prerequisite = { focus = CRO_exploit_natural_resources }
+		x = 31
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_research_slot = 1
+			#Paweu: 'University Sponsored' Idea - +5% research speed
+		}
+	}
+
+	#Put Up Northern Wall
+	focus = {
+		id = CRO_put_up_northern_wall
+		#icon = GFX_
+		prerequisite = { focus = CRO_exploit_natural_resources }
+		x = 33
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			109 = {
+				set_building_level = {
+					type = bunker
+					level = 3
+					province = {
+						id = 9611
+						level < 3
+					}
+					province = {
+						id = 11594
+						level < 3
+					}
+					province = {
+						id = 3627
+						level < 3
+					}
+				}
+			}
+			45 = {
+				set_building_level = {
+					type = bunker
+					level = 3
+					province = {
+						id = 9608
+						level < 3
+					}
+					province = {
+						id = 3623
+						level < 3
+					}
+					province = {
+						id = 9621
+						level < 3
+					}
+				}
+			}
+		}
+	}
+
+	#Fortify Eastern Defences
+	focus = {
+		id = CRO_fortify_eastern_defences
+		#icon = GFX_
+		prerequisite = { focus = CRO_exploit_natural_resources }
+		x = 35
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			45 = {
+				set_building_level = {
+					type = bunker
+					level = 3
+					province = {
+						id = 9621
+						level < 3
+					}
+					province = {
+						id = 3617
+						level < 3
+					}
+				}
+			}
+			774 = {
+				set_building_level = {
+					type = bunker
+					level = 3
+					province = {
+						id = 11580
+						level < 3
+					}
+				}
+			}
+		}
+	}
+
+	#Create Laborer's Committee
+	focus = {
+		id = CRO_create_laborers_committee
+		#icon = GFX_
+		prerequisite = { focus = CRO_fund_local_sac }
+		prerequisite = { focus = CRO_propaganda_campaigns_agrcentres }
+		x = 37
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_stability = 0.15
+			#Paweu: 'Laborer's Committee' Idea - +1% construction speed
+		}
+	}
+
+	#Start Recruitment From Border Towns
+	focus = {
+		id = CRO_recruitment_border_towns
+		#icon = GFX_
+		prerequisite = { focus = CRO_fortify_eastern_defences }
+		prerequisite = { focus = CRO_put_up_northern_wall }
+		x = 34
+		y = 6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_stability = 0.15
+			#Paweu: 'Border Towns Recruitment' Idea - +5% recruitable population
+		}
+	}
+
+	#Create Labour Camps
+	focus = {
+		id = CRO_create_labour_camps
+		#icon = GFX_
+		prerequisite = { focus = CRO_create_laborers_committee }
+		x = 38
+		y = 6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_stability = 0.05
+			#Paweu: 'Labour Camps' Idea - +2% production efficiency, +2% construction speed
+		}
+	}
+
+	#Found University of Split
+	focus = {
+		id = CRO_found_university_split
+		#icon = GFX_
+		prerequisite = { focus = CRO_create_labour_camps focus = CRO_recruitment_border_towns }
+		x = 36
+		y = 7
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = { }
+
+		completion_reward = {
+			add_research_slot = 1
 		}
 	}
 }

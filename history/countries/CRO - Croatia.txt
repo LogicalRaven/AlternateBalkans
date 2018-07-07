@@ -90,29 +90,29 @@ set_politics = {
 	elections_allowed = yes # none after offset 1
 }
 
-1939.1.1 = {
+1936.1.1 = {
 	set_politics = {
 
 		parties = {
 			democratic = { 
-				popularity = 28
+				popularity = 12
 			}
 
 			fascism = {
-				popularity = 3
+				popularity = 46
 			}
 			
 			communism = {
-				popularity = 1
+				popularity = 3
 			}
 			neutrality = {
-				popularity = 68
+				popularity = 39
 			}
 		}
-		ruling_party = neutrality
+		ruling_party = fascism
 		last_election = "1935.6.9"
 		election_frequency = 12
-		elections_allowed = no # none after offset 1
+		elections_allowed = no
 	}
 }
 
@@ -128,21 +128,20 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Milan Stojadinović"
+	name = "Ante Pavelic"
+	desc = "ANTE_PAVELIC_DESC"
+	picture = "CRO_Ante_Pavelic.dds"
 	expire = "1965.1.1"
-	#desc = ""
-	#picture
 	ideology = fascism_ideology
 	traits = {
 		#
 	}
 }
 
-#Mihai: In this timeline, he survives the assassination attempt
 create_country_leader = {
-	name = "Stjepan Radić"
+	name = "Stjepan Radic"
 	#desc = ""
-	#picture
+	picture = "CRO_Stjepan_Radic.dds"
 	expire = "1965.1.1"
 	ideology = centrism
 	traits = {
@@ -151,10 +150,10 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Srđan Budisavljević"
+	name = "Vladko Macek"
 	ideology = liberalism
 	#desc = ""
-	#picture
+	picture = "CRO_Vladko_Macek.dds"
 	expire = "1965.1.1"
 	traits = {
 		#
@@ -162,10 +161,21 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Pavle Gregorić"
+	name = "Milan Gorkic"
 	ideology = marxism
 	#desc = ""
-	#picture
+	picture = "CRO_Milan_Gorkic.dds"
+	expire = "1965.1.1"
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Margit von Batthyany"
+	ideology = absolute
+	#desc = ""
+	picture = "CRO_Margit_Batthyany.dds"
 	expire = "1965.1.1"
 	traits = {
 		#

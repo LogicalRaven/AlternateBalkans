@@ -1,4 +1,9 @@
 ﻿l_english:
+#Monarchism Ideology
+monarchism:0 "Monarchist"
+monarchism_noun:0 "Monarchism"
+monarchism_desc:0 "Monarchist Rule"
+#Countries
  GER_fascism:0 "German Reich"
  GER_fascism_DEF:0 "The German Reich"
  GER_democratic:0 "German Republic"

@@ -70,6 +70,10 @@ opinion_modifiers = {
 		value = -40
 	}
 
+	trade_amtorg {
+		value = 20
+	}
+
 	#
 	#BASE GAME
 	#
