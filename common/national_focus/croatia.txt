@@ -18,7 +18,7 @@ focus_tree = {
 	#Croatian Legacy
 	focus = {
 		id = CRO_croatian_legacy
-		#icon = GFX_
+		icon = GFX_croatian_legacy
 		mutually_exclusive = { focus = CRO_unite_the_balkans }
 		x = 7
 		y = 0
@@ -43,7 +43,7 @@ focus_tree = {
 	#Unite the Balkans
 	focus = {
 		id = CRO_unite_the_balkans
-		#icon = GFX_
+		icon = GFX_unite_the_balkans
 		mutually_exclusive = { focus = CRO_croatian_legacy }
 		x = 20
 		y = 0
@@ -69,7 +69,7 @@ focus_tree = {
 	#Keep Nationalist Movements
 	focus = {
 		id = CRO_keep_nationalist_movements
-		#icon = GFX_
+		icon = GFX_keep_nationalist_movements
 		prerequisite = { focus = CRO_croatian_legacy }
 		mutually_exclusive = { focus = CRO_find_royal_family }
 		mutually_exclusive = { focus = CRO_western_appearance }
@@ -100,7 +100,7 @@ focus_tree = {
 	#Popularize Fascist Government
 	focus = {
 		id = CRO_popularize_fascist_government
-		#icon = GFX_
+		icon = GFX_popularize_fascist_government
 		prerequisite = { focus = CRO_keep_nationalist_movements }
 		x = 0
 		y = 2
@@ -129,7 +129,7 @@ focus_tree = {
 	#Expand Civil Support
 	focus = {
 		id = CRO_expand_civil_support
-		#icon = GFX_
+		icon = GFX_expand_civil_support
 		prerequisite = { focus = CRO_keep_nationalist_movements }
 		x = 2
 		y = 2
@@ -156,7 +156,7 @@ focus_tree = {
 	#Strengthen Public Opinion
 	focus = {
 		id = CRO_strengthen_public_opinion
-		#icon = GFX_
+		icon = GFX_strengthen_public_opinion
 		prerequisite = { focus = CRO_popularize_fascist_government focus = CRO_expand_civil_support }
 		x = 2
 		y = 3
@@ -184,7 +184,7 @@ focus_tree = {
 	#Fascist Government
 	focus = {
 		id = CRO_fascist_government
-		#icon = GFX_
+		icon = GFX_fascist_government
 		prerequisite = { focus = CRO_popularize_fascist_government }
 		prerequisite = { focus = CRO_expand_civil_support }
 		prerequisite = { focus = CRO_strengthen_public_opinion }
@@ -224,7 +224,7 @@ focus_tree = {
 	#Veza
 	focus = {
 		id = CRO_veza
-		#icon = GFX_
+		icon = GFX_veza
 		prerequisite = { focus = CRO_fascist_government }
 		x = 0
 		y = 5
@@ -255,7 +255,7 @@ focus_tree = {
 	#Demand Banat
 	focus = {
 		id = CRO_demand_banat
-		#icon = GFX_
+		icon = GFX_demand_banat
 		prerequisite = { focus = CRO_fascist_government }
 		x = 2
 		y = 5
@@ -286,7 +286,7 @@ focus_tree = {
 	#Return Trieste
 	focus = {
 		id = CRO_return_trieste
-		#icon = GFX_
+		icon = GFX_return_trieste
 		prerequisite = { focus = CRO_veza }
 		x = 0
 		y = 6
@@ -330,7 +330,7 @@ focus_tree = {
 	#Sign Salzburg Treaty
 	focus = {
 		id = CRO_sign_salzburg_treaty
-		#icon = GFX_
+		icon = GFX_goal_tripartite_pact
 		prerequisite = { focus = CRO_demand_banat }
 		x = 2
 		y = 6
@@ -357,7 +357,7 @@ focus_tree = {
 	#Announce Stability
 	focus = {
 		id = CRO_announce_stability
-		#icon = GFX_
+		icon = GFX_announce_stability
 		prerequisite = { focus = CRO_return_trieste }
 		prerequisite = { focus = CRO_sign_salzburg_treaty }
 		x = 1
@@ -401,7 +401,7 @@ focus_tree = {
 	#Nationalize Slovenia
 	focus = {
 		id = CRO_nationalize_slovenia
-		#icon = GFX_
+		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = CRO_announce_stability }
 		x = 0
 		y = 8
@@ -460,7 +460,7 @@ focus_tree = {
 	#Nationalize Banat
 	focus = {
 		id = CRO_nationalize_banat
-		#icon = GFX_
+		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = CRO_announce_stability }
 		x = 2
 		y = 8
@@ -499,7 +499,7 @@ focus_tree = {
 	#Proclaim Greater Croatia
 	focus = {
 		id = CRO_proclaim_greater_croatia
-		#icon = GFX_
+		icon = GFX_proclaim_greater_croatia
 		prerequisite = { focus = CRO_nationalize_banat }
 		prerequisite = { focus = CRO_nationalize_slovenia }
 		x = 1
@@ -525,7 +525,7 @@ focus_tree = {
 	#Find the Royal Family
 	focus = {
 		id = CRO_find_royal_family
-		#icon = GFX_
+		icon = GFX_find_royal_family
 		prerequisite = { focus = CRO_croatian_legacy }
 		mutually_exclusive = { focus = CRO_keep_nationalist_movements }
 		mutually_exclusive = { focus = CRO_western_appearance }
@@ -560,7 +560,7 @@ focus_tree = {
 	#Subordinate the Monarch
 	focus = {
 		id = CRO_subordinate_monarch
-		#icon = GFX_
+		icon = GFX_subordinate_monarch
 		prerequisite = { focus = CRO_find_royal_family }
 		mutually_exclusive = { focus = CRO_let_monarch_rule }
 		x = 4
@@ -590,7 +590,7 @@ focus_tree = {
 	#Local Parliaments
 	focus = {
 		id = CRO_local_parliaments
-		#icon = GFX_
+		icon = GFX_local_parliaments
 		prerequisite = { focus = CRO_subordinate_monarch }
 		x = 4
 		y = 3
@@ -630,7 +630,7 @@ focus_tree = {
 	#Elect a President
 	focus = {
 		id = CRO_elect_president
-		#icon = GFX_
+		icon = GFX_elect_president
 		prerequisite = { focus = CRO_local_parliaments }
 		x = 4
 		y = 4
@@ -668,7 +668,7 @@ focus_tree = {
 	#Let the Monarch Rule
 	focus = {
 		id = CRO_let_monarch_rule
-		#icon = GFX_
+		icon = GFX_let_the_monarch_rule
 		prerequisite = { focus = CRO_find_royal_family }
 		mutually_exclusive = { focus = CRO_subordinate_monarch }
 		x = 6
@@ -698,7 +698,7 @@ focus_tree = {
 	#Prince's Figureheads
 	focus = {
 		id = CRO_prince_figureheads
-		#icon = GFX_
+		icon = GFX_prince_figureheads
 		prerequisite = { focus = CRO_let_monarch_rule }
 		x = 6
 		y = 3
@@ -742,7 +742,7 @@ focus_tree = {
 	#Elect a King
 	focus = {
 		id = CRO_elect_king
-		#icon = GFX_
+		icon = GFX_elect_king
 		prerequisite = { focus = CRO_prince_figureheads }
 		x = 6
 		y = 4
@@ -780,7 +780,7 @@ focus_tree = {
 	#Treaty of Split
 	focus = {
 		id = CRO_treaty_split
-		#icon = GFX_
+		icon = GFX_treaty_split
 		prerequisite = { focus = CRO_elect_president focus = CRO_elect_king }
 		x = 5
 		y = 5
@@ -811,7 +811,7 @@ focus_tree = {
 	#Defend Croatian Lands
 	focus = {
 		id = CRO_defend_croatian_lands
-		#icon = GFX_
+		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = CRO_treaty_split }
 		x = 5
 		y = 6
@@ -839,7 +839,7 @@ focus_tree = {
 	#Strengthen Industry
 	focus = {
 		id = CRO_strengthen_industry
-		#icon = GFX_
+		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = CRO_defend_croatian_lands }
 		x = 5
 		y = 7
@@ -908,7 +908,7 @@ focus_tree = {
 	#Western Appearance
 	focus = {
 		id = CRO_western_appearance
-		#icon = GFX_
+		icon = GFX_western_appearance
 		prerequisite = { focus = CRO_croatian_legacy }
 		mutually_exclusive = { focus = CRO_keep_nationalist_movements }
 		mutually_exclusive = { focus = CRO_find_royal_family }
@@ -939,7 +939,7 @@ focus_tree = {
 	#People's Freedoms
 	focus = {
 		id = CRO_people_freedoms
-		#icon = GFX_
+		icon = GFX_people_freedoms
 		prerequisite = { focus = CRO_western_appearance }
 		x = 8
 		y = 2
@@ -966,7 +966,7 @@ focus_tree = {
 	#Society Support
 	focus = {
 		id = CRO_society_support
-		#icon = GFX_
+		icon = GFX_society_support
 		prerequisite = { focus = CRO_western_appearance }
 		x = 10
 		y = 2
@@ -995,7 +995,7 @@ focus_tree = {
 	#Organize Free Elections
 	focus = {
 		id = CRO_organize_free_elections
-		#icon = GFX_
+		icon = GFX_organize_free_elections
 		prerequisite = { focus = CRO_people_freedoms }
 		prerequisite = { focus = CRO_society_support }
 		x = 9
@@ -1034,7 +1034,7 @@ focus_tree = {
 	#Strengthen Economy
 	focus = {
 		id = CRO_strengthen_economy
-		#icon = GFX_
+		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = CRO_organize_free_elections }
 		x = 10
 		y = 4
@@ -1062,7 +1062,7 @@ focus_tree = {
 	#Organize European Cooperation
 	focus = {
 		id = CRO_organize_european_cooperation
-		#icon = GFX_
+		icon = GFX_organize_european_cooperation
 		prerequisite = { focus = CRO_organize_free_elections }
 		x = 8
 		y = 4
@@ -1106,7 +1106,7 @@ focus_tree = {
 	#Strengthen Local Companies
 	focus = {
 		id = CRO_strengthen_local_companies
-		#icon = GFX_
+		icon = GFX_focus_generic_aluminum
 		prerequisite = { focus = CRO_organize_european_cooperation }
 		x = 8
 		y = 5
@@ -1147,7 +1147,7 @@ focus_tree = {
 	#Strengthen Economy II
 	focus = {
 		id = CRO_strengthen_economy_2
-		#icon = GFX_
+		icon = GFX_focus_generic_the_giant_wakes
 		prerequisite = { focus = CRO_strengthen_economy }
 		x = 10
 		y = 5
@@ -1186,7 +1186,7 @@ focus_tree = {
 	#Organized Cooperation
 	focus = {
 		id = CRO_organized_cooperation
-		#icon = GFX_
+		icon = GFX_organized_cooperation
 		prerequisite = { focus = CRO_strengthen_local_companies }
 		prerequisite = { focus = CRO_strengthen_economy_2 }
 		x = 9
@@ -1214,7 +1214,7 @@ focus_tree = {
 	#Recognize Soviet Union
 	focus = {
 		id = CRO_recognize_soviet_union
-		#icon = GFX_
+		icon = GFX_recognize_soviet_union
 		prerequisite = { focus = CRO_croatian_legacy }
 		mutually_exclusive = { focus = CRO_keep_nationalist_movements }
 		mutually_exclusive = { focus = CRO_find_royal_family }
@@ -1242,7 +1242,7 @@ focus_tree = {
 	#Communists in the Government
 	focus = {
 		id = CRO_communist_in_government
-		#icon = GFX_
+		icon = GFX_communist_in_government
 		prerequisite = { focus = CRO_recognize_soviet_union }
 		x = 12
 		y = 2
@@ -1270,7 +1270,7 @@ focus_tree = {
 	#Influence the Public
 	focus = {
 		id = CRO_influence_public
-		#icon = GFX_
+		icon = GFX_influence_public
 		prerequisite = { focus = CRO_recognize_soviet_union }
 		x = 14
 		y = 2
@@ -1297,7 +1297,7 @@ focus_tree = {
 	#Censor the Media
 	focus = {
 		id = CRO_censor_media
-		#icon = GFX_
+		icon = GFX_censor_media
 		prerequisite = { focus = CRO_communist_in_government focus = CRO_influence_public }
 		x = 14
 		y = 3
@@ -1333,7 +1333,7 @@ focus_tree = {
 	#Communist Government
 	focus = {
 		id = CRO_communist_government
-		#icon = GFX_
+		icon = GFX_communist_government
 		prerequisite = { focus = CRO_communist_in_government }
 		prerequisite = { focus = CRO_influence_public }
 		prerequisite = { focus = CRO_censor_media }
@@ -1373,7 +1373,7 @@ focus_tree = {
 	#Claim Slovenia
 	focus = {
 		id = CRO_claim_slovenia
-		#icon = GFX_
+		icon = GFX_claim_slovenia
 		prerequisite = { focus = CRO_communist_government }
 		x = 12
 		y = 5
@@ -1403,7 +1403,7 @@ focus_tree = {
 	#Demand Bosnian Integration
 	focus = {
 		id = CRO_demand_bosnian_integration
-		#icon = GFX_
+		icon = GFX_demand_bosnian_integration
 		prerequisite = { focus = CRO_communist_government }
 		x = 14
 		y = 5
@@ -1430,7 +1430,7 @@ focus_tree = {
 	#Appease Soviet Union
 	focus = {
 		id = CRO_appease_soviet_union
-		#icon = GFX_
+		icon = GFX_goal_support_communism
 		prerequisite = { focus = CRO_claim_slovenia }
 		prerequisite = { focus = CRO_demand_bosnian_integration }
 		x = 13
@@ -1465,7 +1465,7 @@ focus_tree = {
 	#Join Comintern
 	focus = {
 		id = CRO_join_comintern
-		#icon = GFX_
+		icon = GFX_focus_generic_join_comintern
 		prerequisite = { focus = CRO_appease_soviet_union }
 		x = 13
 		y = 7
@@ -1492,7 +1492,7 @@ focus_tree = {
 	#Influence the Neighbours
 	focus = {
 		id = CRO_influence_neighbours
-		#icon = GFX_
+		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = CRO_join_comintern }
 		x = 12
 		y = 8
@@ -1525,7 +1525,7 @@ focus_tree = {
 	#Nationalization of Croatia
 	focus = {
 		id = CRO_nationalization_of_croatia
-		#icon = GFX_
+		icon = GFX_goal_generic_soviet_construction
 		prerequisite = { focus = CRO_join_comintern }
 		x = 14
 		y = 8
@@ -1584,7 +1584,7 @@ focus_tree = {
 	#Proclaim Soviet Republic of Croats
 	focus = {
 		id = CRO_proclaim_soviet_republic_of_croats
-		#icon = GFX_
+		icon = GFX_proclaim_soviet_republic_croats
 		prerequisite = { focus = CRO_influence_neighbours }
 		prerequisite = { focus = CRO_nationalization_of_croatia }
 		x = 13
@@ -1610,7 +1610,7 @@ focus_tree = {
 	#Country's Preparation
 	focus = {
 		id = CRO_country_preparation
-		#icon = GFX_
+		icon = GFX_country_preparation
 		prerequisite = { focus = CRO_unite_the_balkans }
 		x = 18
 		y = 1
@@ -1635,7 +1635,7 @@ focus_tree = {
 	#Arise Unification Aura
 	focus = {
 		id = CRO_arise_unification_aura
-		#icon = GFX_
+		icon = GFX_arise_unification_aura
 		prerequisite = { focus = CRO_unite_the_balkans }
 		x = 22
 		y = 1
@@ -1675,7 +1675,7 @@ focus_tree = {
 	#First Important Moves
 	focus = {
 		id = CRO_first_important_moves
-		#icon = GFX_
+		icon = GFX_first_important_moves
 		prerequisite = { focus = CRO_country_preparation }
 		prerequisite = { focus = CRO_arise_unification_aura }
 		x = 20
@@ -1726,7 +1726,7 @@ focus_tree = {
 	#Appease Slovenia
 	focus = {
 		id = CRO_appease_slovenia
-		#icon = GFX_
+		icon = GFX_appease_slovenia
 		prerequisite = { focus = CRO_first_important_moves }
 		x = 17
 		y = 3
@@ -1760,7 +1760,7 @@ focus_tree = {
 	#Slovenian-Croatian Agreement
 	focus = {
 		id = CRO_slovenian_croatian_agreement
-		#icon = GFX_
+		icon = GFX_slovenian_croatian_agreement
 		prerequisite = { focus = CRO_first_important_moves }
 		x = 20
 		y = 3
@@ -1787,7 +1787,7 @@ focus_tree = {
 	#Merge Our Politics
 	focus = {
 		id = CRO_merge_our_politics
-		#icon = GFX_
+		icon = GFX_merge_our_politics
 		prerequisite = { focus = CRO_first_important_moves }
 		x = 23 
 		y = 3
@@ -1814,7 +1814,7 @@ focus_tree = {
 	#Proclaim Croatia-Slovenia
 	focus = {
 		id = CRO_proclaim_croatia_slovenia
-		#icon = GFX_
+		icon = GFX_proclaim_croatia_slovenia
 		prerequisite = { focus = CRO_appease_slovenia }
 		prerequisite = { focus = CRO_slovenian_croatian_agreement }
 		prerequisite = { focus = CRO_merge_our_politics }
@@ -1850,7 +1850,7 @@ focus_tree = {
 	#First Illyrian Agreement
 	focus = {
 		id = CRO_first_illyrian_agreement
-		#icon = GFX_
+		icon = GFX_illyrian_agreement
 		prerequisite = { focus = CRO_proclaim_croatia_slovenia }
 		x = 17
 		y = 5
@@ -1878,7 +1878,7 @@ focus_tree = {
 	#Further Balkan Unification
 	focus = {
 		id = CRO_further_balkan_unification
-		#icon = GFX_
+		icon = GFX_further_balkan_unification
 		prerequisite = { focus = CRO_proclaim_croatia_slovenia }
 		x = 20
 		y = 5
@@ -1912,7 +1912,7 @@ focus_tree = {
 	#Second Illyrian Agreement
 	focus = {
 		id = CRO_second_illyrian_agreement
-		#icon = GFX_
+		icon = GFX_illyrian_agreement
 		prerequisite = { focus = CRO_proclaim_croatia_slovenia }
 		x = 23
 		y = 5
@@ -1940,7 +1940,7 @@ focus_tree = {
 	#Proclaim Illyria
 	focus = {
 		id = CRO_proclaim_illyria
-		#icon = GFX_
+		icon = GFX_proclaim_illyria
 		prerequisite = { focus = CRO_first_illyrian_agreement }
 		prerequisite = { focus = CRO_further_balkan_unification }
 		prerequisite = { focus = CRO_second_illyrian_agreement }
@@ -1978,7 +1978,7 @@ focus_tree = {
 	#Cede Mali i Zi
 	focus = {
 		id = CRO_cede_mali_i_zi
-		#icon = GFX_
+		icon = GFX_cede_mali_i_zi
 		prerequisite = { focus = CRO_proclaim_illyria }
 		x = 18
 		y = 7
@@ -2005,7 +2005,7 @@ focus_tree = {
 	#Partition of Serbia
 	focus = {
 		id = CRO_partition_of_serbia
-		#icon = GFX_
+		icon = GFX_partition_serbia
 		prerequisite = { focus = CRO_proclaim_illyria }
 		x = 22
 		y = 7
@@ -2032,7 +2032,7 @@ focus_tree = {
 	#United Dream
 	focus = {
 		id = CRO_united_dream
-		#icon = GFX_
+		icon = GFX_united_dream
 		prerequisite = { focus = CRO_cede_mali_i_zi }
 		prerequisite = { focus = CRO_partition_of_serbia }
 		x = 20
@@ -2073,7 +2073,7 @@ focus_tree = {
 	#New National Consciousness
 	focus = {
 		id = CRO_new_national_consciousness
-		#icon = GFX_
+		icon = GFX_new_national_consciousness
 		prerequisite = { focus = CRO_united_dream }
 		x = 20
 		y = 10
@@ -2281,6 +2281,7 @@ focus_tree = {
 				ruling_party = neutrality
 				elections_allowed = yes
 			}
+			set_cosmetic_tag = ILL
 		}
 	}
 
@@ -2662,6 +2663,7 @@ focus_tree = {
 				ruling_party = monarchism
 				elections_allowed = no
 			}
+			set_cosmetic_tag = ILL
 		}
 	}
 
@@ -2899,6 +2901,7 @@ focus_tree = {
 				ruling_party = democratic
 				elections_allowed = yes
 			}
+			set_cosmetic_tag = ILL
 		}
 	}
 
@@ -3199,6 +3202,7 @@ focus_tree = {
 			add_ideas = {
 				fascist_influence
 			}
+			set_cosmetic_tag = ILL
 		}
 	}
 
@@ -3513,6 +3517,7 @@ focus_tree = {
 				ruling_party = communism
 				elections_allowed = no
 			}
+			set_cosmetic_tag = ILL
 		}
 	}
 
