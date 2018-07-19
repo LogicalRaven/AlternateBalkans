@@ -2100,7 +2100,7 @@ focus_tree = {
 	#Illyrian Congress
 	focus = {
 		id = CRO_illyrian_congress
-		#icon = GFX_
+		icon = GFX_illyrian_congress
 		prerequisite = { focus = CRO_new_national_consciousness }
 		mutually_exclusive = { focus = CRO_empower_royal_family }
 		mutually_exclusive = { focus = CRO_westernize_illyria }
@@ -2132,7 +2132,7 @@ focus_tree = {
 	#Neutralize Country
 	focus = {
 		id = CRO_neutralize_country
-		#icon = GFX_
+		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = CRO_illyrian_congress }
 		x = 11
 		y = 12
@@ -2168,7 +2168,7 @@ focus_tree = {
 	#Reorganize the State
 	focus = {
 		id = CRO_reorganize_state
-		#icon = GFX_
+		icon = GFX_focus_generic_diplomatic_treaty
 		prerequisite = { focus = CRO_illyrian_congress }
 		x = 13
 		y = 12
@@ -2195,7 +2195,7 @@ focus_tree = {
 	#Isolate the Balkans
 	focus = {
 		id = CRO_isolate_balkans
-		#icon = GFX_
+		icon = GFX_focus_generic_little_entente
 		prerequisite = { focus = CRO_neutralize_country }
 		x = 11
 		y = 13
@@ -2220,7 +2220,7 @@ focus_tree = {
 	#Strengthen Congress Neutrality
 	focus = {
 		id = CRO_strengthen_congress_neutrality
-		#icon = GFX_
+		icon = GFX_focus_generic_self_management
 		prerequisite = { focus = CRO_reorganize_state }
 		x = 13
 		y = 13
@@ -2248,7 +2248,7 @@ focus_tree = {
 	#Neutral Congress of Illyria
 	focus = {
 		id = CRO_neutral_congress_of_illyria
-		#icon = GFX_
+		icon = GFX_neutral_congress_illyria
 		prerequisite = { focus = CRO_isolate_balkans }
 		prerequisite = { focus = CRO_strengthen_congress_neutrality }
 		x = 12
@@ -2288,7 +2288,7 @@ focus_tree = {
 	#Nationalize Illyria
 	focus = {
 		id = CRO_nationalize_illyria
-		#icon = GFX_
+		icon = GFX_focus_focus_generic_industry_1
 		prerequisite = { focus = CRO_neutral_congress_of_illyria }
 		x = 11
 		y = 15
@@ -2347,7 +2347,7 @@ focus_tree = {
 	#Balkan Protection Union
 	focus = {
 		id = CRO_balkan_protection_union
-		#icon = GFX_
+		icon = GFX_balkan_protection_union
 		prerequisite = { focus = CRO_neutral_congress_of_illyria }
 		x = 13
 		y = 15
@@ -2374,7 +2374,7 @@ focus_tree = {
 	#Further Nationalization
 	focus = {
 		id = CRO_further_nationalization
-		#icon = GFX_
+		icon = GFX_focus_generic_industry_2
 		prerequisite = { focus = CRO_nationalize_illyria }
 		x = 11
 		y = 16
@@ -2423,7 +2423,7 @@ focus_tree = {
 	#Invite Romania
 	focus = {
 		id = CRO_invite_romania
-		#icon = GFX_
+		icon = GFX_invite_romania
 		prerequisite = { focus = CRO_balkan_protection_union }
 		x = 13
 		y = 16
@@ -2436,6 +2436,7 @@ focus_tree = {
 				is_puppet = no
 				NOT = { has_war_with = CRO }
 				is_in_faction = no
+				neutrality > 0.45
 			}
 		}
 
@@ -2457,7 +2458,7 @@ focus_tree = {
 	#Develop Industrial Districts
 	focus = {
 		id = CRO_develop_industrial_districts
-		#icon = GFX_
+		icon = GFX_focus_generic_industry_3
 		prerequisite = { focus = CRO_further_nationalization }
 		x = 11
 		y = 17
@@ -2506,7 +2507,7 @@ focus_tree = {
 	#Invite Albania
 	focus = {
 		id = CRO_invite_albania
-		#icon = GFX_
+		icon = GFX_invite_albania
 		prerequisite = { focus = CRO_invite_romania }
 		x = 13
 		y = 17
@@ -2519,6 +2520,7 @@ focus_tree = {
 				is_puppet = no
 				NOT = { has_war_with = CRO }
 				is_in_faction = no
+				neutrality > 0.45
 			}
 		}
 
@@ -2540,7 +2542,7 @@ focus_tree = {
 	#Empower Royal Family
 	focus = {
 		id = CRO_empower_royal_family
-		#icon = GFX_
+		icon = GFX_empower_royal_family
 		prerequisite = { focus = CRO_new_national_consciousness }
 		mutually_exclusive = { focus = CRO_illyrian_congress }
 		mutually_exclusive = { focus = CRO_westernize_illyria }
@@ -2572,7 +2574,7 @@ focus_tree = {
 	#Establish a King
 	focus = {
 		id = CRO_establish_king
-		#icon = GFX_
+		icon = GFX_establish_king
 		prerequisite = { focus = CRO_empower_royal_family }
 		x = 15
 		y = 12
@@ -2601,7 +2603,7 @@ focus_tree = {
 	#Organize the Royal Court
 	focus = {
 		id = CRO_organize_royal_court
-		#icon = GFX_
+		icon = GFX_organize_royal_court
 		prerequisite = { focus = CRO_empower_royal_family }
 		x = 17
 		y = 12
@@ -2630,7 +2632,7 @@ focus_tree = {
 	#Long Live the King
 	focus = {
 		id = CRO_long_live_king
-		#icon = GFX_
+		icon = GFX_long_live_king
 		prerequisite = { focus = CRO_establish_king }
 		prerequisite = { focus = CRO_organize_royal_court }
 		x = 16
@@ -2670,7 +2672,7 @@ focus_tree = {
 	#Expanding Illyrian Influence
 	focus = {
 		id = CRO_expanding_illyrian_influence
-		#icon = GFX_
+		icon = GFX_expanding_illyrian_influence
 		prerequisite = { focus = CRO_long_live_king }
 		x = 16
 		y = 14
@@ -2703,7 +2705,7 @@ focus_tree = {
 	#Influence Albania
 	focus = {
 		id = CRO_influence_albania
-		#icon = GFX_
+		icon = GFX_influence_albania
 		prerequisite = { focus = CRO_expanding_illyrian_influence }
 		x = 15
 		y = 15
@@ -2728,7 +2730,7 @@ focus_tree = {
 	#Influence Greece
 	focus = {
 		id = CRO_influence_greece
-		#icon = GFX_
+		icon = GFX_influence_greece
 		prerequisite = { focus = CRO_expanding_illyrian_influence }
 		x = 17
 		y = 15
@@ -2753,7 +2755,7 @@ focus_tree = {
 	#Establish Balkan Entente
 	focus = {
 		id = CRO_establish_balkan_entente
-		#icon = GFX_
+		icon = GFX_focus_generic_little_entente
 		prerequisite = { focus = CRO_influence_albania }
 		prerequisite = { focus = CRO_influence_greece }
 		x = 16
@@ -2782,7 +2784,7 @@ focus_tree = {
 	#Westernize Illyria
 	focus = {
 		id = CRO_westernize_illyria
-		#icon = GFX_
+		icon = GFX_westernize_illyria
 		prerequisite = { focus = CRO_new_national_consciousness }
 		mutually_exclusive = { focus = CRO_illyrian_congress }
 		mutually_exclusive = { focus = CRO_empower_royal_family }
@@ -2814,7 +2816,7 @@ focus_tree = {
 	#Westernize Governmet
 	focus = {
 		id = CRO_westernize_government
-		#icon = GFX_
+		icon = GFX_westernize_government
 		prerequisite = { focus = CRO_westernize_illyria }
 		x = 19
 		y = 12
@@ -2841,7 +2843,7 @@ focus_tree = {
 	#Westernize Constitution
 	focus = {
 		id = CRO_westernize_constitution
-		#icon = GFX_
+		icon = GFX_westernize_constitution
 		prerequisite = { focus = CRO_westernize_illyria }
 		x = 21
 		y = 12
@@ -2868,7 +2870,7 @@ focus_tree = {
 	#Western Government
 	focus = {
 		id = CRO_western_government
-		#icon = GFX_
+		icon = GFX_goal_support_democracy
 		prerequisite = { focus = CRO_westernize_government }
 		prerequisite = { focus = CRO_westernize_constitution }
 		x = 20
@@ -2908,7 +2910,7 @@ focus_tree = {
 	#Influence Balkan Sphere
 	focus = {
 		id = CRO_influence_balkan_sphere
-		#icon = GFX_
+		icon = GFX_influence_balkan_sphere
 		prerequisite = { focus = CRO_western_government }
 		x = 20
 		y = 14
@@ -2947,7 +2949,7 @@ focus_tree = {
 	#Balkan League
 	focus = {
 		id = CRO_balkan_league
-		#icon = GFX_
+		icon = GFX_goal_generic_alliance
 		prerequisite = { focus = CRO_influence_balkan_sphere }
 		x = 20
 		y = 15
@@ -2975,7 +2977,7 @@ focus_tree = {
 	#Invite Romania
 	focus = {
 		id = CRO_invite_romania_democracy
-		#icon = GFX_
+		icon = GFX_invite_romania
 		prerequisite = { focus = CRO_balkan_league }
 		x = 19
 		y = 16
@@ -2984,6 +2986,16 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 5
+		}
+
+		available = {
+			ROM = {
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = CRO }
+				is_in_faction = no
+				democratic > 0.45
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -3000,7 +3012,7 @@ focus_tree = {
 	#Invite Greece
 	focus = {
 		id = CRO_invite_greece
-		#icon = GFX_
+		icon = GFX_invite_greece
 		prerequisite = { focus = CRO_balkan_league }
 		x = 21
 		y = 16
@@ -3009,6 +3021,16 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 5
+		}
+
+		available = {
+			GRE = {
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = CRO }
+				is_in_faction = no
+				democratic > 0.45
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -3025,7 +3047,7 @@ focus_tree = {
 	#Bulgarian Question
 	focus = {
 		id = CRO_bulgarian_question
-		#icon = GFX_
+		icon = GFX_bulgarian_question
 		prerequisite = { focus = CRO_invite_romania_democracy }
 		prerequisite = { focus = CRO_invite_greece }
 		x = 20
@@ -3053,7 +3075,7 @@ focus_tree = {
 	#Balkan Republic Idea
 	focus = {
 		id = CRO_balkan_republic_idea
-		#icon = GFX_
+		icon = GFX_balkan_republic_idea
 		prerequisite = { focus = CRO_bulgarian_question }
 		x = 20
 		y = 18
@@ -3358,6 +3380,16 @@ focus_tree = {
 			factor = 1
 		}
 
+		available = {
+			GRE = {
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = CRO }
+				is_in_faction = no
+				fascism > 0.45
+			}
+		}
+
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -3382,6 +3414,16 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 3
+		}
+
+		available = {
+			ROM = {
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = CRO }
+				is_in_faction = no
+				fascism > 0.45
+			}
 		}
 
 		cancel_if_invalid = yes
