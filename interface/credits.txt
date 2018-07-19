@@ -1,0 +1,35 @@
+﻿#Hearts of Iron IV: Alternate Balkans
+
+#Mod was created by
+#Logical Raven Development Team
+
+
+#Creative Director
+CLOUD
+
+#Mod Director
+[ Paweu ]
+
+#Project Lead
+Brave
+Mihai
+
+#Mod Design
+Brave
+[ Paweu ]
+
+#Programming
+Brave
+Mihai
+[ Paweu ]
+
+#Content Designers
+Brave
+CLOUD
+
+#Artists
+Lutz
+Der Kaiser
+
+#Testers
+Logical Raven Development Team

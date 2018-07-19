@@ -1,4 +1,4 @@
-﻿name="Raven Development - Alternate Balkans"
+﻿name="Alternate Balkans"
 path="mod/raven/"
 tags={
 	"Alternative History"
