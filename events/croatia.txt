@@ -430,6 +430,18 @@ country_event = {
 				target = SLV
 				transfer_troops = yes
 			}
+			777 = {
+				add_core_of = CRO
+			}
+			770 = {
+				add_core_of = CRO
+			}
+			102 = {
+				add_core_of = CRO
+			}
+			773 = {
+				add_core_of = CRO
+			}
 		}
 	}
 }
@@ -549,6 +561,12 @@ country_event = {
 				target = BOS
 				transfer_troops = yes
 			}
+			104 = {
+				add_core_of = CRO
+			}
+			768 = {
+				add_core_of = CRO
+			}
 		}
 	}
 }
@@ -629,6 +647,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 		CRO = {
 			transfer_state = 105
+			add_state_core = 105
 		}
 		ALB = {
 			remove_state_core = 105
@@ -830,10 +849,14 @@ country_event = {
 			transfer_state = 107
 			transfer_state = 108
 			transfer_state = 775
+			add_state_core = 107
+			add_state_core = 108
+			add_state_core = 775
 			country_event = { hours = 2 id = croatia_ab.39 }
 		}
 		ROM = {
 			transfer_state = 82
+			add_state_core = 82
 			country_event = { hours = 2 id = croatia_ab.39 }
 		}
 		custom_effect_tooltip = GAME_OVER_TT
@@ -939,6 +962,10 @@ country_event = {
 				target = SER
 				transfer_troops = yes
 			}
+			add_state_core = 107
+			add_state_core = 108
+			add_state_core = 775
+			add_state_core = 82
 			country_event = { hours = 2 id = croatia_ab.41 }
 		}
 	}
@@ -1542,6 +1569,18 @@ country_event = {
 		CRO = {
 			set_cosmetic_tag = CSV
 		}
+		777 = {
+			remove_core_of = SLV
+		}
+		770 = {
+			remove_core_of = SLV
+		}
+		102 = {
+			remove_core_of = SLV
+		}
+		773 = {
+			remove_core_of = SLV
+		}
 	}
 }
 
@@ -1560,6 +1599,12 @@ country_event = {
 		ai_chance = { factor = 100 }
 		CRO = {
 			set_cosmetic_tag = ILL
+		}
+		104 = {
+			remove_core_of = BOS
+		}
+		768 = {
+			remove_core_of = BOS
 		}
 	}
 }
