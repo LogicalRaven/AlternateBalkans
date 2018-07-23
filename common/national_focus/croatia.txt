@@ -3100,7 +3100,7 @@ focus_tree = {
 	#Strengthen Fascist Movements
 	focus = {
 		id = CRO_strengthen_fascist_movements
-		#icon = GFX_
+		icon = GFX_strengthen_fascist_movements
 		prerequisite = { focus = CRO_new_national_consciousness }
 		mutually_exclusive = { focus = CRO_illyrian_congress }
 		mutually_exclusive = { focus = CRO_empower_royal_family }
@@ -3131,7 +3131,7 @@ focus_tree = {
 	#March on Zagreb
 	focus = {
 		id = CRO_march_on_zagreb
-		#icon = GFX_
+		icon = GFX_march_on_zagreb
 		prerequisite = { focus = CRO_strengthen_fascist_movements }
 		x = 23
 		y = 12
@@ -3159,7 +3159,7 @@ focus_tree = {
 	#March on Split
 	focus = {
 		id = CRO_march_on_split
-		#icon = GFX_
+		icon = GFX_march_on_split
 		prerequisite = { focus = CRO_strengthen_fascist_movements }
 		x = 25
 		y = 12
@@ -3188,7 +3188,7 @@ focus_tree = {
 	#Fascist Illyrian Government
 	focus = {
 		id = CRO_fascist_illyrian_government
-		#icon = GFX_
+		icon = GFX_fascist_illyrian_government
 		prerequisite = { focus = CRO_march_on_zagreb }
 		prerequisite = { focus = CRO_march_on_split }
 		x = 24
@@ -3231,7 +3231,7 @@ focus_tree = {
 	#Demand Macedonia
 	focus = {
 		id = CRO_demand_macedonia
-		#icon = GFX_
+		icon = GFX_demand_macedonia
 		prerequisite = { focus = CRO_fascist_illyrian_government }
 		x = 23
 		y = 14
@@ -3258,7 +3258,7 @@ focus_tree = {
 	#Influence Albania
 	focus = {
 		id = CRO_influence_albania_fascist
-		#icon = GFX_
+		icon = GFX_influence_albania
 		prerequisite = { focus = CRO_fascist_illyrian_government }
 		x = 25
 		y = 14
@@ -3287,7 +3287,7 @@ focus_tree = {
 	#Influence Romania
 	focus = {
 		id = CRO_influence_romania
-		#icon = GFX_
+		icon = GFX_influence_romania
 		prerequisite = { focus = CRO_demand_macedonia }
 		x = 23
 		y = 15
@@ -3316,7 +3316,7 @@ focus_tree = {
 	#Puppet Albania
 	focus = {
 		id = CRO_puppet_albania
-		#icon = GFX_
+		icon = GFX_puppet_albania
 		prerequisite = { focus = CRO_influence_albania_fascist }
 		x = 25
 		y = 15
@@ -3343,7 +3343,7 @@ focus_tree = {
 	#Balkan Axis
 	focus = {
 		id = CRO_balkan_axis
-		#icon = GFX_
+		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = CRO_influence_romania }
 		prerequisite = { focus = CRO_puppet_albania }
 		x = 24
@@ -3369,7 +3369,7 @@ focus_tree = {
 	#Invite Greece
 	focus = {
 		id = CRO_invite_greece_fascist
-		#icon = GFX_
+		icon = GFX_invite_greece
 		prerequisite = { focus = CRO_balkan_axis }
 		x = 23
 		y = 17
@@ -3405,7 +3405,7 @@ focus_tree = {
 	#Invite Romania
 	focus = {
 		id = CRO_invite_romania_fascist
-		#icon = GFX_
+		icon = GFX_invite_romania
 		prerequisite = { focus = CRO_balkan_axis }
 		x = 25
 		y = 17
@@ -3440,7 +3440,7 @@ focus_tree = {
 	#Communist Appearance
 	focus = {
 		id = CRO_communist_appearance
-		#icon = GFX_
+		icon = GFX_communist_appearance
 		prerequisite = { focus = CRO_new_national_consciousness }
 		mutually_exclusive = { focus = CRO_illyrian_congress }
 		mutually_exclusive = { focus = CRO_empower_royal_family }
@@ -3472,7 +3472,7 @@ focus_tree = {
 	#Soviet Influence
 	focus = {
 		id = CRO_soviet_influence
-		#icon = GFX_
+		icon = GFX_focus_generic_soviet_politics
 		prerequisite = { focus = CRO_communist_appearance }
 		x = 27
 		y = 12
@@ -3499,7 +3499,7 @@ focus_tree = {
 	#Inside Influence
 	focus = {
 		id = CRO_inside_influence
-		#icon = GFX_
+		icon = GFX_inside_influence
 		prerequisite = { focus = CRO_communist_appearance }
 		x = 29
 		y = 12
@@ -3526,7 +3526,7 @@ focus_tree = {
 	#Communist State
 	focus = {
 		id = CRO_communist_state
-		#icon = GFX_
+		icon = GFX_goal_support_communism
 		prerequisite = { focus = CRO_soviet_influence }
 		prerequisite = { focus = CRO_inside_influence }
 		x = 28
@@ -3566,7 +3566,7 @@ focus_tree = {
 	#Pro-Balkan Ideas
 	focus = {
 		id = CRO_probalkan_ideas
-		#icon = GFX_
+		icon = GFX_probalkan_ideas
 		prerequisite = { focus = CRO_communist_state }
 		mutually_exclusive = { focus = CRO_prosoviet_ideas }
 		x = 27
@@ -3592,7 +3592,7 @@ focus_tree = {
 	#Pro-Soviet Ideas
 	focus = {
 		id = CRO_prosoviet_ideas
-		#icon = GFX_
+		icon = GFX_prosoviet_ideas
 		prerequisite = { focus = CRO_communist_state }
 		mutually_exclusive = { focus = CRO_probalkan_ideas }
 		x = 29
@@ -3623,7 +3623,7 @@ focus_tree = {
 	#Invite Tito Over
 	focus = {
 		id = CRO_invite_tito_over
-		#icon = GFX_
+		icon = GFX_invite_tito_over
 		prerequisite = { focus = CRO_probalkan_ideas }
 		x = 27
 		y = 15
@@ -3649,7 +3649,7 @@ focus_tree = {
 	#Pro-Soviet Government
 	focus = {
 		id = CRO_prosoviet_government
-		#icon = GFX_
+		icon = GFX_prosoviet_government
 		prerequisite = { focus = CRO_prosoviet_ideas }
 		x = 29
 		y = 15
@@ -3702,7 +3702,7 @@ focus_tree = {
 	#Join Comintern
 	focus = {
 		id = CRO_join_comintern_ub
-		#icon = GFX_
+		icon = GFX_focus_generic_join_comintern
 		prerequisite = { focus = CRO_prosoviet_government }
 		x = 29
 		y = 16
@@ -3729,7 +3729,7 @@ focus_tree = {
 	#Take Yugoslavian Lands
 	focus = {
 		id = CRO_take_yugoslavian_lands
-		#icon = GFX_
+		icon = GFX_demand_macedonia
 		prerequisite = { focus = CRO_proclaim_yugoslavia }
 		x = 27
 		y = 17
